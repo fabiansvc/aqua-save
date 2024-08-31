@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unknown-property */
+import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber"
 
 const World = () =>{
@@ -10,9 +11,12 @@ const World = () =>{
                 }
             }
         >
+            <ambientLight intensity={1.5}/>
+            <directionalLight position={[0,10,10]} intensity={2} />
+            <OrbitControls/> 
             <mesh>
-                <boxGeometry args={[1,1,1]}/>
-                <meshBasicMaterial color="purple"/>
+                <sphereGeometry args={[1,10,1]} />
+                <meshToonMaterial color="Blue"/>
             </mesh>
         </Canvas>
     )
