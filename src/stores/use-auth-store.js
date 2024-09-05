@@ -34,6 +34,7 @@ const useAuthStore = create((set) => ({
   observeAuthState: () => {
     set({ loading: true });
     onAuthStateChanged(auth, (user) => {
+      console.log("Estado de autenticación:", user); 
       if (user) {
         set({ user, loading: false });
       } else {
