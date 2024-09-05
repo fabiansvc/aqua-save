@@ -1,11 +1,9 @@
 import React from "react";
+import World from "../../World";
 
 const Anima = () => {
     return (
-        <div>
-            <h1>Modelos en construcción :3</h1>
-            <p>Esta página estará destinada a modelos 3D y otras animaciones en el futuro</p>
-        </div>
+        <World/>
     );
 };
 
