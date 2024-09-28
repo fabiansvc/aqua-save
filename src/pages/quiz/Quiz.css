@@ -1,0 +1,30 @@
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+  border: 20px solid #0f88b4; 
+  margin: 20px;
+  position: relative;
+  min-height: 100vh;
+  background-color: #d2c59570;
+}
+
+.quiz-header {
+  font-size: x-large;
+  color: #067fef;
+  font-family: 'SpicyRice', cursive;
+  font-weight: bold;
+}
+
+.quiz-progress {
+  font-size: larger;
+}
+
+.app-logo{
+  width: 100px;
+  margin-bottom: 20px;
+}
