@@ -1,7 +1,7 @@
 import "./Sitemap.css";
 import React from "react"; 
 import { Link } from "react-router-dom";
-import Gridselection from "../../components/gridselection";
+import Gridselection from "../../components/Gridselection";
 
 const Sitemap = () => {
   return (
