@@ -55,10 +55,20 @@ const Login = () => {
         </>
       ) : (
         <>
+<<<<<<< HEAD
         <p className="welcome-text">Bienvenido! Cada Gota Cuenta</p>
           <button onClick={handleLogin}>Iniciar sesión</button>
         </>
       )}
+=======
+          <p className="welcome-text">Bienvenido! Cada Gota Cuenta</p>
+          <button className= "button-login" onClick={handleLogin}>Iniciar sesión</button>
+        </>
+      )}
+      <div className="waves">
+        <img src="/waves.png" alt="Waves img" className="waves-img"/>
+      </div>
+>>>>>>> 10a87a6958a733f9ffeb93636f2ace8b8caab133
     </div>
   );
 };
