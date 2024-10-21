@@ -9,6 +9,7 @@ const Welcome = () => {
 
   const handleLogout = useCallback(() => {
     logout();
+    navigate("/");
   }, [logout]);
 
   const onHandleButtonNext = useCallback(() => {
