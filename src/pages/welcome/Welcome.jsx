@@ -13,7 +13,7 @@ const Welcome = () => {
   }, [logout]);
 
   const onHandleButtonNext = useCallback(() => {
-    navigate("/Sitemap");  // Redirigir al SiteMap
+    navigate("/Sitemap"); 
   }, [navigate]);
 
   if (!user) {
@@ -24,11 +24,13 @@ const Welcome = () => {
     <div className="welcome-container">
       <img src="/logo.png" alt="App Logo" className="app-logo" />
       <div className="user-info">
-        <img src={user.photoURL || "/images/default-avatar.png"} alt={user.displayName || "Usuario"} className="user-photo" />
+        <img className="user-photo" src={user.photoURL || "/images/default-avatar.png"} alt={user.displayName || "Usuario"}  />
         <h1 className="welcome-header">Bienvenido! {user.displayName}</h1>
       </div>
-      <button onClick={onHandleButtonNext}>Siguiente</button>
-      <button onClick={handleLogout}>Cerrar Sesión</button>
+      <div className="button-container">
+      <button className="button" onClick={onHandleButtonNext}>Siguiente</button>
+      <button className="button" onClick={handleLogout}>Cerrar Sesión</button>
+      </div>
     </div>
   );
 };

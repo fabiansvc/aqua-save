@@ -15,12 +15,10 @@
 
 .welcome-header {
   font-size: x-large;
-  color: #067fef;
+  color: #333
   font-family: Arial, sans-serif;
   font-weight: bold;
 }
-
-
 
 .app-logo{
   width: 250px;
