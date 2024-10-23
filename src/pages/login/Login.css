@@ -6,17 +6,16 @@
   height: 100vh;
   text-align: center;
   padding: 20px;
-  border: 20px solid #0f88b4; 
   margin: 20px;
   position: relative;
   min-height: 100vh;
-  background-color: #d2c59570;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  background-color: #a0d8ec;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
 }
 
 .welcome-text {
   font-size: x-large;
-  color: #067fef;
+  color: #333
   font-family: Arial, sans-serif;
   font-weight: bold;
 }
@@ -29,10 +28,10 @@
 }
 
 .app-logo{
-  width: 100px;
+  width: 250px;
   margin-bottom: 20px;
   padding: 10px;
-  border: 20px solid #067fef;
+  border: 5px solid #a0d8ec;
 }
 
 .user-info{
