@@ -60,9 +60,6 @@ const Login = () => {
           <button className= "button-login" onClick={handleLogin}>Iniciar sesión</button>
         </>
       )}
-      <div className="waves">
-        <img src="/waves.png" alt="Waves img" className="waves-img"/>
-      </div>
 
     </div>
   );

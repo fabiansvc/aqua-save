@@ -3,11 +3,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Gridselection from "../../components/Gridselection";
 
+import useAuthStore from "../../stores/use-auth-store";
+
+
 const Sitemap = () => {
+  const { user } = useAuthStore();
   return (
     <div className="sitemap-container">
       <h1>Sitios de interés de nuestra plataforma</h1>
-      <p>Hola querido usuario. Aquí podrás encontrar enlaces a todas las secciones importantes de nuestra aplicación.</p>
+      <p>Hola! {user.displayName}. Aquí podrás encontrar enlaces a todas las secciones importantes de nuestra aplicación.</p>
 
       <h2>Seleccionar temas</h2>
       
