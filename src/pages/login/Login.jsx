@@ -21,10 +21,16 @@ const Login = () => {
         name: user.displayName,
         photo: user.photoURL,
       };
-      UserDAO.createUser(newUser);
-      navigate("/Quiz");
+      UserDAO.createUser(newUser).then((response) => {
+        if (response.success) {
+          navigate("/Welcome");
+        } else {
+          console.error("Error al crear el usuario:", response.error);
+        }
+      });
     }
   }, [user, navigate]);
+
 
   const handleLogin = useCallback(() => {
     loginGoogleWithPopUp();
@@ -40,15 +46,18 @@ const Login = () => {
 
   return (
     <div className="container-login">
+      <img src="/logo.png" alt="App Logo" className="app-logo" />
       {user ? (
         <>
-          <p className="welcome-text">Bienvenido, {user.displayName}</p>
           <button className="button-logout" onClick={handleLogout}>
             Cerrar sesión
           </button>
         </>
       ) : (
-        <button onClick={handleLogin}>Iniciar sesión</button>
+        <>
+          <p className="welcome-text">Bienvenido! Cada Gota Cuenta</p>
+          <button className= "button-login" onClick={handleLogin}>Iniciar sesión</button>
+        </>
       )}
     </div>
   );
