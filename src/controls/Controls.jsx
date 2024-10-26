@@ -1,13 +1,19 @@
-import { OrbitControls } from "@react-three/drei";
+import React from 'react';
+import { OrbitControls } from '@react-three/drei';
 
-const Controls = () =>{
-    returns (
-        <OrbitControls
-        maxPolarAngle={Math.PI * 0.45}
-        minPolarAngle={Math.PI * 0.25} 
-        target0={[-10, 3, 0]}
-        />
-    );
-}; 
+const Controls = () => {
+  return (
+    <OrbitControls
+      minAzimuthAngle={-Math.PI / 2} 
+      maxAzimuthAngle={Math.PI / 2}  
 
-export default Controls; 
+     
+      minPolarAngle={0}        
+      maxPolarAngle={Math.PI / 2} 
+
+      enableZoom={true} 
+    />
+  );
+};
+
+export default Controls;

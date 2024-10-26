@@ -1,10 +1,9 @@
 import Login from "../pages/login/Login.jsx";
-import Quiz from "../pages/quiz/Quiz.jsx";
-import Anima from "../pages/anima/Anima.jsx";
-
 import { createBrowserRouter } from "react-router-dom";
 import PublicRouter from "./PublicRouter.jsx";
 import ProtectedRouter from "./ProtectedRouter.jsx";
+import Welcome from "../pages/welcome/Welcome.jsx";
+import Sitemap from "../pages/sitemap/Sitemap.jsx";
 
 const Routers = createBrowserRouter([
   {
@@ -16,18 +15,18 @@ const Routers = createBrowserRouter([
     ),
   },
   {
-    path: "/Quiz",
+    path: "/Welcome",
     element: (
       <ProtectedRouter>
-        <Quiz />
+        <Welcome />
       </ProtectedRouter>
     ),
   },
   {
-     path: "/Anima",
+     path: "/Sitemap",
      element: (
        <ProtectedRouter>
-         <Anima />
+         <Sitemap />
        </ProtectedRouter>
      ),
    },

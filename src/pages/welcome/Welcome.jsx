@@ -17,6 +17,7 @@ const Welcome = () => {
   }, [navigate]);
 
   if (!user) {
+    navigate("/Welcome")
     return <p>Por favor, inicie sesión.</p>; 
   }
 
