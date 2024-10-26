@@ -6,7 +6,7 @@ const themes = [
   {
     title: 'Contaminación del agua',
     image: '/images/contaminacionagua.jpeg',
-    link: '/waterpollution/Waterpollution'
+    link: '/waterpollution/Water'
   },
   {
     title: 'Acidificación de los océanos',

@@ -55,7 +55,6 @@ const Login = () => {
         </>
       ) : (
         <>
-
           <p className="welcome-text">Bienvenido! Cada Gota Cuenta</p>
           <button className= "button-login" onClick={handleLogin}>Iniciar sesión</button>
         </>
