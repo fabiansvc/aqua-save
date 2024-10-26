@@ -16,14 +16,12 @@ const Water = () => {
 
   return (
     <Canvas>
-      <Controls /> {/* Añade controles limitados a 180 grados */}
+      <Controls /> 
       <Staging />
       <Beachtown />
-
       {boardPositions.map((props, index) => (
         <Board key={index} {...props} scale={0.02} />
       ))}
-
       <Lights />
     </Canvas>
   );
