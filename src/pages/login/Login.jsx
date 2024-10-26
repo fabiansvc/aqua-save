@@ -46,7 +46,7 @@ const Login = () => {
 
   return (
     <div className="container-login">
-      <img src="/logo.png" alt="App Logo" className="app-logo" />
+      <img src="/public/images/logo.png" alt="App Logo" className="app-logo" />
       {user ? (
         <>
           <button className="button-logout" onClick={handleLogout}>
