@@ -14,10 +14,10 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/Welcome" element={<Welcome />} />
         <Route path="/Sitemap" element={<Sitemap />} />
-        <Route path="waterpollution/Water" element={<Water />} />
-        <Route path="microplastics/Microplastics" element={<Microplastics />} />
-        <Route path="oceanacid/Oceanacid" element={<Oceanacid />} />
-        <Route path="watershortages/Watershortages" element={<Watershortages />} />
+        <Route path="/waterpollution/Water" element={<Water />} />
+        <Route path="/microplastics/Microplastics" element={<Microplastics />} />
+        <Route path="/oceanacid/Oceanacid" element={<Oceanacid />} />
+        <Route path="/watershortages/Watershortages" element={<Watershortages />} />
       </Routes>
     </Router>
   );
