@@ -30,6 +30,38 @@ const Routers = createBrowserRouter([
        </ProtectedRouter>
      ),
    },
+  {
+    path: "/Water",
+    element: (
+      <ProtectedRouter>
+        <Water/>
+      </ProtectedRouter>
+    ),
+  },
+  {
+    path: "/Watershortages",
+    element: (
+      <ProtectedRouter>
+        <Watershortages />
+      </ProtectedRouter>
+    ),
+  },
+  {
+    path: "/Oceanacid",
+    element: (
+      <ProtectedRouter>
+        <Oceanacid/>
+      </ProtectedRouter>
+    ),
+  },
+  {
+    path: "/Microplastics",
+    element: (
+      <ProtectedRouter>
+        <Microplastics/>
+      </ProtectedRouter>
+    ),
+  },
 ]);
 
 export default Routers;
