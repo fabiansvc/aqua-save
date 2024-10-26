@@ -9,7 +9,7 @@ const Welcome = () => {
 
   const handleLogout = useCallback(() => {
     logout();
-    navigate("/");
+    navigate("/"); 
   }, [logout]);
 
   const onHandleButtonNext = useCallback(() => {
@@ -17,6 +17,7 @@ const Welcome = () => {
   }, [navigate]);
 
   if (!user) {
+    navigate("/Welcome")
     return <p>Por favor, inicie sesión.</p>; 
   }
 
