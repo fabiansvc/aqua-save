@@ -34,7 +34,7 @@ const Routers = createBrowserRouter([
        </ProtectedRouter>
      ),
    },
-   {
+  {
     path: "/Water",
     element: (
       <ProtectedRouter>
