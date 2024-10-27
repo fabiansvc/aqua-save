@@ -2,6 +2,10 @@ import "./Welcome.css";
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import useAuthStore from "../../stores/use-auth-store";
+import { OrbitControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import LightsWelcome from "./lights/LightsWelcome";
+import TreeWelcome from "./models-welcome-3d/TreeWelcome";
 
 
 const Welcome = () => {
@@ -27,7 +31,14 @@ const Welcome = () => {
 
   return (
     <div className="welcome-container">
-      <img src="/images/logo.png" alt="App Logo" className="app-logo" />
+
+      <>
+        <Canvas className="app-logo"shadows camera={{position:[0,1,5]}}>
+          <OrbitControls autoRotate/>
+          <LightsWelcome/>
+          <TreeWelcome/>
+        </Canvas>
+      </>
 
       <div className="user-info">
         <img className="user-photo" src={user.photoURL || "/images/default-avatar.png"} alt={user.displayName || "Usuario"}  />
