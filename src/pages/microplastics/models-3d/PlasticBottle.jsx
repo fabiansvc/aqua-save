@@ -12,11 +12,12 @@ const PlasticBottle = (props) => {
           name="high_poly"
           geometry={nodes.high_poly.geometry}
           material={materials.Material_0}
-          scale={1.781}
+          scale={[50, 50, 50]}
+          position={[0,7.5,0]}
         />
-        <mesh position={[0, -0.5, 0]} rotation-x = {Math.PI /2}>
-            <boxGeometry args = {[2, 2, 0.2]}/>
-            <meshStandardMaterial color ={"purple"}
+        <mesh name = "bottle" position={[0, 2, -2]} rotation-x = {Math.PI /2} castShadow >
+            <boxGeometry args = {[2, 1, 0.2]}/>
+            <meshStandardMaterial color ={"blue"}
             />
         </mesh>
       </group>
