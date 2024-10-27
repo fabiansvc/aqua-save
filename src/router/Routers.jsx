@@ -1,12 +1,14 @@
 import Login from "../pages/login/Login.jsx";
+import Quiz from "../pages/quiz/Quiz.jsx";
+import Anima from "../pages/anima/Anima.jsx";
 import { createBrowserRouter } from "react-router-dom";
 import PublicRouter from "./PublicRouter.jsx";
 import ProtectedRouter from "./ProtectedRouter.jsx";
 import Welcome from "../pages/welcome/Welcome.jsx";
 import Sitemap from "../pages/sitemap/Sitemap.jsx";
-import Water from "../pages/waterpollution/Water.jsx";
-import Watershortages from "../pages/watershortages/Watershortages.jsx";
 import Oceanacid from "../pages/oceanacid/Oceanacid.jsx";
+import Watershortages from "../pages/watershortages/Watershortages.jsx";
+import Waterpollution from "../pages/waterpollution/Waterpollution.jsx";
 import Microplastics from "../pages/microplastics/Microplastics.jsx";
 
 const Routers = createBrowserRouter([
@@ -19,7 +21,7 @@ const Routers = createBrowserRouter([
     ),
   },
   {
-    path: "/Welcome",
+    path: "/quiz",
     element: (
       <ProtectedRouter>
         <Welcome />
@@ -27,7 +29,7 @@ const Routers = createBrowserRouter([
     ),
   },
   {
-     path: "/Sitemap",
+     path: "/anima",
      element: (
        <ProtectedRouter>
          <Sitemap />
@@ -35,15 +37,31 @@ const Routers = createBrowserRouter([
      ),
    },
   {
-    path: "/Water",
-    element: (
-      <ProtectedRouter>
-        <Water/>
-      </ProtectedRouter>
-    ),
-  },
+     path: "/welcome",
+     element: (
+       <ProtectedRouter>
+         <Welcome />
+       </ProtectedRouter>
+     ),
+   },
   {
-    path: "/Watershortages",
+     path: "/sitemap",
+     element: (
+       <ProtectedRouter>
+          <Sitemap />
+       </ProtectedRouter>
+     ),
+   },
+  {
+     path: "/oceanacid",
+     element: (
+       <ProtectedRouter>
+         <Oceanacid />
+       </ProtectedRouter>
+     ),
+   },
+   {
+    path: "/watershortages",
     element: (
       <ProtectedRouter>
         <Watershortages />
@@ -51,21 +69,23 @@ const Routers = createBrowserRouter([
     ),
   },
   {
-    path: "/Oceanacid",
+    path: "/waterpollution",
     element: (
       <ProtectedRouter>
-        <Oceanacid/>
+        <Waterpollution/>
       </ProtectedRouter>
     ),
   },
   {
-    path: "/Microplastics",
+    path: "/microplastics",
     element: (
       <ProtectedRouter>
-        <Microplastics/>
+        <Microplastics />
       </ProtectedRouter>
     ),
   },
+   
+  
 ]);
 
 export default Routers;

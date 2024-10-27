@@ -6,22 +6,22 @@ const themes = [
   {
     title: 'Contaminación del agua',
     image: '/images/contaminacionagua.jpeg',
-    link: '/waterpollution/Water'
+    link: '/waterpollution'
   },
   {
     title: 'Acidificación de los océanos',
     image: '/images/acidificacionoceanos.jpeg',
-    link: '/oceanacid/Oceanacid'
+    link: '/oceanacid'
   },
   {
     title: 'Microplásticos',
     image: '/images/microplasticos.jpeg',
-    link: '/microplastics/Microplastics'
+    link: '/microplastics'
   },
   {
     title: 'Escasez del agua',
-    image: '/images/escasezagua.jpeg',
-    link: '/watershortages/Watershortages'
+    image: '/images/escazesagua.jpeg',
+    link: '/watershortages'
   }
 ];
 

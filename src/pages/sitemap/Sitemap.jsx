@@ -24,13 +24,13 @@ const Sitemap = () => {
           <Link to="/">Inicio</Link>
         </li>
         <li>
-          <Link to="/Welcome">Bienvenida</Link>
+          <Link to="/welcome">Bienvenida</Link>
         </li>
         <li>
-          <Link to="/Sitemap">Mapa del Sitio</Link>
+          <Link to="/sitemap">Mapa del Sitio</Link>
         </li>
         <li>
-          <Link to="/Quiz">Quiz</Link>
+          <Link to="/quiz">Quiz</Link>
         </li>
       </ul>
 
