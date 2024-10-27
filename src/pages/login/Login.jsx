@@ -3,6 +3,11 @@ import { useCallback, useEffect } from "react";
 import useAuthStore from "../../stores/use-auth-store";
 import UserDAO from "../../daos/UserDAO";
 import { useNavigate } from "react-router-dom";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import Lights from "../login/lights/Lights";
+import Tree from "../login/modelos-3d/Tree";
+
 
 const Login = () => {
   const { user, loginGoogleWithPopUp, logout, observeAuthState, loading } =
@@ -46,7 +51,14 @@ const Login = () => {
 
   return (
     <div className="container-login">
-      <img src="/public/images/logo.png" alt="App Logo" className="app-logo" />
+       <>
+        <Canvas shadows camera={{position:[0,1,5]}}>
+          <OrbitControls autoRotate/>
+          <Lights/>
+          <Tree/>
+        </Canvas>
+      </>
+      
       {user ? (
         <>
           <button className="button-logout" onClick={handleLogout}>

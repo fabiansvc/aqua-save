@@ -3,6 +3,7 @@ import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import useAuthStore from "../../stores/use-auth-store";
 
+
 const Welcome = () => {
   const { user, logout } = useAuthStore();
   const navigate  = useNavigate(); 
@@ -16,6 +17,9 @@ const Welcome = () => {
     navigate("/Sitemap"); 
   }, [navigate]);
 
+
+
+  
   if (!user) {
     navigate("/Welcome")
     return <p>Por favor, inicie sesión.</p>; 
@@ -23,7 +27,8 @@ const Welcome = () => {
 
   return (
     <div className="welcome-container">
-      <img src="/public/images/logo.png" alt="App Logo" className="app-logo" />
+      <img src="/logo.png" alt="App Logo" className="app-logo" />
+
       <div className="user-info">
         <img className="user-photo" src={user.photoURL || "/images/default-avatar.png"} alt={user.displayName || "Usuario"}  />
         <h1 className="welcome-header">Bienvenido! {user.displayName}</h1>

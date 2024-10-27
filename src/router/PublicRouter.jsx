@@ -4,7 +4,7 @@ import useAuthStore from "../stores/use-auth-store";
 const PublicRouter = ({children}) => {
      const {user} = useAuthStore()
      if(user){
-          return <Navigate to = "/Welcome" replace />
+          return <Navigate to = "/welcome" replace />
      } 
      return children;
 }
