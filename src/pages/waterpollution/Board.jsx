@@ -2,7 +2,7 @@ import React from 'react';
 import { useGLTF } from '@react-three/drei';
 
 const Board = (props) => {
-  const { nodes, materials } = useGLTF("/public/models-3d/chalk_board.glb"); // Corrige la ruta según sea necesario
+  const { nodes, materials } = useGLTF("/models-3d/chalk_board.glb"); // Corrige la ruta según sea necesario
 
   return (
     <group {...props} dispose={null}>
@@ -19,6 +19,6 @@ const Board = (props) => {
   );
 };
 
-useGLTF.preload("/public/models-3d/chalk_board.glb"); // Asegúrate de que esta sea la ruta correcta a tu archivo
+useGLTF.preload("/models-3d/chalk_board.glb"); // Asegúrate de que esta sea la ruta correcta a tu archivo
 
 export default Board;

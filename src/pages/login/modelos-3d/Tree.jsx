@@ -2,7 +2,7 @@ import { useGLTF } from "@react-three/drei"
 
 
 const Tree = (props) => {
-     const {nodes, materials}= useGLTF("modelos-3d/tree.glb");
+     const {nodes, materials}= useGLTF("models-3d/tree.glb");
         
   
      return (
@@ -20,5 +20,5 @@ const Tree = (props) => {
 
 export default Tree;
 
-useGLTF.preload("modelos-3d/tree.glb");
+useGLTF.preload("models-3d/tree.glb");
 
