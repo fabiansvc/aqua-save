@@ -1,7 +1,7 @@
 import { useGLTF } from "@react-three/drei"
 
 
-const Tree = (props) => {
+const TreeWelcome = (props) => {
      const {nodes, materials}= useGLTF("models-3d/tree.glb");
         
   
@@ -11,14 +11,13 @@ const Tree = (props) => {
             receiveShadow
             geometry={nodes.high_poly.geometry}
             material={materials.Material_0}    
-            scale={5.000}
+            scale={10.000}
           />
         </group>
      )
 
 };
 
-export default Tree;
+export default TreeWelcome;
 
 useGLTF.preload("models-3d/tree.glb");
-

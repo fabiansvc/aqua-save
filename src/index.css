@@ -1,13 +1,18 @@
 button {
-  padding: 10px 20px;
-  font-size: medium;
+  padding: 15px 40px;
+  font-size: 20px;
+  font-family: Georgia, serif;
   color: #fff;
   background-color: #007bff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 10px;
+  margin-bottom: 100px;
+  margin-top: 30px;
+  margin-left: 20px;
+
 }
+
 
 button:hover {
   background-color: #0056b3;
