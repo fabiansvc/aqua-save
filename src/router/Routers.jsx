@@ -7,8 +7,8 @@ import Welcome from "../pages/welcome/Welcome.jsx";
 import Sitemap from "../pages/sitemap/Sitemap.jsx";
 import Oceanacid from "../pages/oceanacid/Oceanacid.jsx";
 import Watershortages from "../pages/watershortages/Watershortages.jsx";
-import Waterpollution from "../pages/waterpollution/Waterpollution.jsx";
 import Microplastics from "../pages/microplastics/Microplastics.jsx";
+import Water from "../pages/waterpollution/Water.jsx";
 
 const Routers = createBrowserRouter([
   {
@@ -63,7 +63,7 @@ const Routers = createBrowserRouter([
     path: "/waterpollution",
     element: (
       <ProtectedRouter>
-        <Waterpollution/>
+        <Water/>
       </ProtectedRouter>
     ),
   },

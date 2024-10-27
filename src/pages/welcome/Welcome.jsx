@@ -27,7 +27,7 @@ const Welcome = () => {
 
   return (
     <div className="welcome-container">
-      <img src="/logo.png" alt="App Logo" className="app-logo" />
+      <img src="/images/logo.png" alt="App Logo" className="app-logo" />
 
       <div className="user-info">
         <img className="user-photo" src={user.photoURL || "/images/default-avatar.png"} alt={user.displayName || "Usuario"}  />
