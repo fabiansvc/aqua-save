@@ -15,8 +15,8 @@ const PlasticBottle = (props) => {
           scale={1.781}
         />
         <mesh position={[0, -0.5, 0]} rotation-x = {Math.PI /2}>
-            <boxGeometry args = {[2, 2, 0.1]}/>
-            <meshStandardMaterial color ={"blue"}
+            <boxGeometry args = {[2, 2, 0.2]}/>
+            <meshStandardMaterial color ={"purple"}
             />
         </mesh>
       </group>
