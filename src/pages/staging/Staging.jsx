@@ -11,7 +11,7 @@ const Staging = () =>{
             scale: 100,
         }}
 
-        files={"/public/hdris/evening_road_01_puresky_2k.hdr"}
+        files={"/hdris/evening_road_01_puresky_2k.hdr"}
         background={true}
         
         
