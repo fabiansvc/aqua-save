@@ -1,20 +1,19 @@
 import { useHelper } from "@react-three/drei";
 import { useRef } from "react";
 
-
-const LightsPlastic =() =>{
+const LightsAcuaticSystem =() => {
     const directionalLightRef = useRef();
     useHelper(directionalLightRef);
     return (
         <>
-        <ambientLight intensity={2}/>
+        <ambientLight intensity={1}/>
         <directionalLight 
         ref={directionalLightRef}
         castShadow
-        position={[0,6,5]} 
+        position={[90,200,100]} 
         intensity={5}
-        shadow-mapSice={[10, 10]}
-        shadow-camera-far={50}
+        shadow-mapSice={[100, 100]}
+        shadow-camera-far={10}
         shadow-camera-left={-1}
         shadow-camera-right={1}
         shadow-camera-top={10}
@@ -24,4 +23,4 @@ const LightsPlastic =() =>{
     );
 };
 
-export default LightsPlastic;
+export default LightsAcuaticSystem;
