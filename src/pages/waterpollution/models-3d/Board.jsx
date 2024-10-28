@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 const Board = (props) => {
@@ -14,9 +14,9 @@ const Board = (props) => {
         />
       </group>
     </group>
-  )
-}
+  ); 
+}; 
 
-useGLTF.preload("/public/models-3d/board.glb")
+useGLTF.preload("/public/models-3d/board.glb"); 
 
 export default Board; 
