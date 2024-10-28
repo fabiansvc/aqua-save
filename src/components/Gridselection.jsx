@@ -1,37 +1,29 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Canvas } from "@react-three/fiber";
-import { useGLTF } from "@react-three/drei";
 import "./Gridselection.css";
-import { OrbitControls } from "@react-three/drei";
+import { Image } from "@react-three/drei";
 
-
-const Model = ({ modelPath }) => {
-  const { scene } = useGLTF(modelPath); 
-
-  return <primitive object={scene} scale={[1, 1, 1]} />;
-};
 
 const themes = [
   {
-    title: "Contaminación del agua",
-    modelPath: "/models-3d/fish_skeleton.glb",
-    link: "/waterpollution",
+    title: 'Contaminación del agua',
+    image: '/images/pollution.jpeg',
+    link: '/waterpollution',
   },
   {
-    title: "Acidificación de los océanos",
-    modelPath: "/models-3d/coral_in_salt.glb",
-    link: "/oceanacid",
+    title: 'Acidificación de los océanos',
+    image: '/images/acidification.jpeg',
+    link: '/oceanacid',
   },
   {
-    title: "Microplásticos",
-    modelPath: "/models-3d/microplastic_case.glb",
-    link: "/microplastics",
+    title: 'Microplásticos',
+    image: '/images/microplastic.jpeg',
+    link: '/microplastics',
   },
   {
-    title: "Escasez del agua",
-    modelPath: "/public/models-3d/valley.glb",
-    link: "/watershortages",
+    title: 'Escasez del agua',
+    image: '/images/shortage.jpeg',
+    link: '/watershortages',
   },
 ];
 
@@ -50,13 +42,8 @@ const Gridselection = () => {
           className="card"
           onClick={() => handleClick(theme.link)}
         >
-          <div className="modelContainer">
-            <Canvas style={{ height: "100px", width: "100%" }}>
-              <OrbitControls autoRotate />
-              <ambientLight />
-              <pointLight position={[10, 10, 10]} />
-              <Model modelPath={theme.modelPath} />
-            </Canvas>
+          <div className="imageContainer">
+            <img src={theme.image} alt={theme.title} className="image"/>
           </div>
           <h3>{theme.title}</h3>
         </div>
