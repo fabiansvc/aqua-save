@@ -30,7 +30,7 @@ const themes = [
   },
   {
     title: "Escasez del agua",
-    modelPath: "/public/models-3d/death_valley_-_terrain.glb",
+    modelPath: "/public/models-3d/death_valley_terrain.glb",
     link: "/watershortages",
   },
 ];
