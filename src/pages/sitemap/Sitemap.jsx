@@ -1,8 +1,6 @@
 import "./Sitemap.css";
 import React from "react"; 
 import { Link } from "react-router-dom";
-import { Canvas } from "@react-three/fiber";
-import { Environment, OrbitControls } from "@react-three/drei"; 
 import Gridselection from "../../components/Gridselection";
 import useAuthStore from "../../stores/use-auth-store";
 
@@ -12,13 +10,6 @@ const Sitemap = () => {
   
   return (
       <div className="sitemap-container">
-        <>
-        <Canvas className="staging-background">
-        <Environment files="/public/hdris/lakeside_2k.hdr" background />
-        <OrbitControls enableZoom={false} /> 
-      </Canvas>
-        
-        </>
         <h1>Sitios de interés de nuestra plataforma</h1>
         <p>Hola {user?.displayName || "querido usuario"}. Aquí podrás encontrar enlaces a todas las secciones importantes de nuestra aplicación.</p>
 
