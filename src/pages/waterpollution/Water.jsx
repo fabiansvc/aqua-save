@@ -1,28 +1,35 @@
-import React from 'react';
-import Beachtown from './Beachtown';
-import Board from './Board';
-import { Canvas } from '@react-three/fiber';
-import Staging from '../staging/Staging';
-import Controls from '../../controls/Controls'; // Importa el componente Controls
-import Lights from '../../lights/Lights';
+import React from "react";
+import { Canvas } from "@react-three/fiber";
+import { Physics } from "@react-three/rapier";
+import Beachtown from "./models-3d/Beachtown";
+import Board from "./models-3d/Board";
+import Staging from "../staging/Staging";
+import Controls from "../../controls/Controls";
+import Lights from "../../lights/Lights";
+import WelcomeText from "./WelcomeText";
+import Oceanwaves from "./models-3d/Oceanwaves";
 
 const Water = () => {
   const boardPositions = [
-    { position: [2, 0.5, -3]},
-    { position: [5, 0.5, -1]},
-    { position: [-3, 0.5, 2]},
-    { position: [1, 0.5, 5]},
+    { position: [-6, 1, 6.8] },
+    { position: [5.3, 2, 6.8] },
+    { position: [-5, 2, 4.8] },
+    { position: [2.8, 2, 6.8] },
   ];
 
   return (
     <Canvas>
-      <Controls /> 
-      <Staging />
-      <Beachtown />
-      {boardPositions.map((props, index) => (
-        <Board key={index} {...props} scale={0.02} />
-      ))}
+      <Controls />
       <Lights />
+      <Physics debug={true}>
+        <WelcomeText />
+        <Staging />
+        <Beachtown />
+        <Oceanwaves />
+        {boardPositions.map((props, index) => (
+          <Board key={index} {...props} scale={0.5} />
+        ))}
+      </Physics>
     </Canvas>
   );
 };

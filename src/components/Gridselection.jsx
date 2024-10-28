@@ -1,47 +1,62 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Gridselection.css'; 
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { Canvas } from "@react-three/fiber";
+import { useGLTF } from "@react-three/drei";
+import "./Gridselection.css";
+import { OrbitControls } from "@react-three/drei";
+
+
+const Model = ({ modelPath }) => {
+  const { scene } = useGLTF(modelPath); 
+
+  return <primitive object={scene} scale={[1, 1, 1]} />;
+};
 
 const themes = [
   {
-    title: 'Contaminación del agua',
-    image: '/images/contaminacionagua.jpeg',
-    link: '/waterpollution'
+    title: "Contaminación del agua",
+    modelPath: "/public/models-3d/fish_skeleton.glb",
+    link: "/waterpollution",
   },
   {
-    title: 'Acidificación de los océanos',
-    image: '/images/acidificacionoceanos.jpeg',
-    link: '/oceanacid'
+    title: "Acidificación de los océanos",
+    modelPath: "/public/models-3d/coral_in_salt.glb",
+    link: "/oceanacid",
   },
   {
-    title: 'Microplásticos',
-    image: '/images/microplasticos.jpeg',
-    link: '/microplastics'
+    title: "Microplásticos",
+    modelPath: "/public/models-3d/microplastic_case.glb",
+    link: "/microplastics",
   },
   {
-    title: 'Escasez del agua',
-    image: '/images/escazesagua.jpeg',
-    link: '/watershortages'
-  }
+    title: "Escasez del agua",
+    modelPath: "/public/models-3d/death_valley_-_terrain.glb",
+    link: "/watershortages",
+  },
 ];
 
 const Gridselection = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleClick = (link) => {
-    navigate(link); 
+    navigate(link);
   };
 
   return (
     <div className="grid">
       {themes.map((theme, index) => (
-        <div 
-          key={index} 
-          className="card" 
+        <div
+          key={index}
+          className="card"
           onClick={() => handleClick(theme.link)}
         >
-          <div className="imageContainer">
-            <img src={theme.image} alt={theme.title} className="image" />
+          <div className="modelContainer">
+            <Canvas style={{ height: "100px", width: "100%" }}>
+              <OrbitControls autoRotate />
+              <ambientLight />
+              <pointLight position={[10, 10, 10]} />
+              <Model modelPath={theme.modelPath} />
+            </Canvas>
           </div>
           <h3>{theme.title}</h3>
         </div>
