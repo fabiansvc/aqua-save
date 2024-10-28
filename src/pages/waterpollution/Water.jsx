@@ -26,9 +26,6 @@ const Water = () => {
         <Staging />
         <Beachtown />
         <Oceanwaves />
-        {boardPositions.map((props, index) => (
-          <Boardmodel key={index} {...props} scale={0.5} />
-        ))}
       </Physics>
     </Canvas>
   );
