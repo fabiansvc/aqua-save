@@ -30,7 +30,7 @@ const themes = [
   },
   {
     title: "Escasez del agua",
-    modelPath: "/public/models-3d/valley.glb",
+    modelPath: "/models-3d/valley.glb",
     link: "/watershortages",
   },
 ];
