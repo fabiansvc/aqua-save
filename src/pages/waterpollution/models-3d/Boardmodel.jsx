@@ -1,8 +1,8 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-const Board = (props) => {
-  const { nodes, materials } = useGLTF("/public/models-3d/notice_board_low-poly.glb")
+const Boardmodel = (props) => {
+  const { nodes, materials } = useGLTF("/public/models-3d/board.glb")
   return (
     <group {...props} dispose={null}>
       <group scale={0.01}>
@@ -14,9 +14,9 @@ const Board = (props) => {
         />
       </group>
     </group>
-  )
-}
+  ); 
+}; 
 
-useGLTF.preload("/public/models-3d/notice_board_low-poly.glb")
+useGLTF.preload("/public/models-3d/board.glb"); 
 
-export default Board; 
+export default Boardmodel; 
