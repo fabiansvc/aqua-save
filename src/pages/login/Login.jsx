@@ -6,7 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Lights from "../login/lights/Lights";
-import Tree from "../login/models-login-3d/Tree";
+import Tree from "./models-3d/Tree";
+
 
 
 const Login = () => {
