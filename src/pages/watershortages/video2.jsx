@@ -1,12 +1,12 @@
 import { useVideoTexture } from "@react-three/drei"
 import { useCallback, useState } from "react";
 
-const Video = (props) => {
+const Video2 = (props) => {
 
     const [pause, setPause] = useState(false);
 
 
-    const texture = useVideoTexture("/videos/video_water.mp4", {
+    const texture = useVideoTexture("/videos/video_water2.mp4", {
         muted: false,
         loop: true,
         start: false
@@ -25,4 +25,4 @@ const Video = (props) => {
         </mesh>
     );
 };
-export default Video
+export default Video2

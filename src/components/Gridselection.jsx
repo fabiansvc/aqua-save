@@ -15,17 +15,17 @@ const Model = ({ modelPath }) => {
 const themes = [
   {
     title: "Contaminación del agua",
-    modelPath: "/public/models-3d/fish_skeleton.glb",
+    modelPath: "/models-3d/fish_skeleton.glb",
     link: "/waterpollution",
   },
   {
     title: "Acidificación de los océanos",
-    modelPath: "/public/models-3d/coral_in_salt.glb",
+    modelPath: "/models-3d/coral_in_salt.glb",
     link: "/oceanacid",
   },
   {
     title: "Microplásticos",
-    modelPath: "/public/models-3d/microplastic_case.glb",
+    modelPath: "/models-3d/microplastic_case.glb",
     link: "/microplastics",
   },
   {

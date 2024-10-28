@@ -2,6 +2,7 @@
 import { useGLTF, useTexture } from "@react-three/drei";
 import { useMemo } from "react";
 
+
 const AquaticSystem = (props) =>{
     const {nodes,materials} = useGLTF("models-3d/acuatic-system.glb");
     const PATH = useMemo(() => "materials/floor/plaster_grey_04_", []);

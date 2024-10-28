@@ -9,6 +9,7 @@ const Deathcoral = (props) => {
         <mesh geometry={nodes.Object_2.geometry} material={materials['152k_uv']} />
         <mesh geometry={nodes.Object_3.geometry} material={materials['152k_uv']} />
         <mesh geometry={nodes.Object_4.geometry} material={materials['152k_uv']} />
+        
       </group>
     </group>
   )

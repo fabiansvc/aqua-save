@@ -4,8 +4,9 @@ import { useNavigate } from "react-router-dom";
 import useAuthStore from "../../stores/use-auth-store";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import LightsWelcome from "./lights/LightsWelcome";
-import TreeWelcome from "./models-welcome-3d/TreeWelcome";
+import TreeWelcome from "./models-3d/TreeWelcome";
+import Lights from "../../lights/LightsLogin";
+
 
 
 const Welcome = () => {
@@ -35,7 +36,7 @@ const Welcome = () => {
       <>
         <Canvas className="app-logo"shadows camera={{position:[0,1,5]}}>
           <OrbitControls autoRotate/>
-          <LightsWelcome/>
+          <Lights/>
           <TreeWelcome/>
         </Canvas>
       </>
