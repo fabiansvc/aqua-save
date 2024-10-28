@@ -2,7 +2,6 @@ import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { Physics } from "@react-three/rapier";
 import Beachtown from "./models-3d/Beachtown";
-import Boardmodel from "./models-3d/Boardmodel";
 import Staging from "../staging/Staging";
 import Controls from "../../controls/Controls";
 import Lights from "../../lights/Lights";
