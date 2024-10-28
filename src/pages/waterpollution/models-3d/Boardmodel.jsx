@@ -1,10 +1,7 @@
-import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-const Boardmodel = (props) => {
-
-  const { nodes, materials } = useGLTF("/models-3d/boardmodel.glb")
-
+const Board = (props) => {
+  const { nodes, materials } = useGLTF("/models-3d/board.glb")
   return (
     <group {...props} dispose={null}>
       <group scale={0.01}>
@@ -20,7 +17,7 @@ const Boardmodel = (props) => {
 }; 
 
 
-useGLTF.preload("/models-3d/boardmodel.glb"); 
+useGLTF.preload("/models-3d/board.glb")
 
 export default Boardmodel; 
  

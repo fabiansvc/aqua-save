@@ -11,7 +11,7 @@ const Sitemap = () => {
   return (
       <div className="sitemap-container">
         <h1>Sitios de interés de nuestra plataforma</h1>
-        <p>Hola {user?.displayName || "querido usuario"}. Aquí podrás encontrar enlaces a todas las secciones importantes de nuestra aplicación.</p>
+        <p> Hola, {user?.displayName || "querido usuario"} Aquí podrás encontrar enlaces a todas las secciones importantes de nuestra aplicación".</p>
 
         <h2>Seleccionar temas</h2>
         <Gridselection />
