@@ -3,7 +3,7 @@ import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 const Deathvalley = (props) => {
-  const { nodes, materials } = useGLTF("/public/models-3d/death_valley_-_terrain.glb")
+  const { nodes, materials } = useGLTF("/public/models-3d/death_valley_terrain.glb")
   return (
     <group {...props} dispose={null}>
       <group position={[0, -0.062, 0.062]} rotation={[-Math.PI, 0, 0]}>
@@ -20,6 +20,6 @@ const Deathvalley = (props) => {
   )
 }
 
-useGLTF.preload("/public/models-3d/death_valley_-_terrain.glb"); 
+useGLTF.preload("/public/models-3d/death_valley_terrain.glb"); 
 
 export default Deathvalley; 
