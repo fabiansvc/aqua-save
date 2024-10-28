@@ -9,7 +9,7 @@ const Tree = (props) => {
             receiveShadow
             geometry={nodes.high_poly.geometry}
             material={materials.Material_0}    
-            scale={5.000}
+            scale={7.000}
           />
         </group>
      )
