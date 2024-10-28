@@ -9,6 +9,7 @@ import Lights from "../login/lights/Lights";
 import Tree from "./models-3d/Tree";
 
 
+
 const Login = () => {
   const { user, loginGoogleWithPopUp, logout, observeAuthState, loading } =
     useAuthStore();
@@ -51,8 +52,9 @@ const Login = () => {
 
   return (
     <div className="container-login">
+       
        <>
-        <Canvas shadows camera={{position:[0,1,5]}}>
+        <Canvas className="app-logo"shadows camera={{position:[0,1,5]}}>
           <OrbitControls autoRotate/>
           <Lights/>
           <Tree/>
@@ -66,7 +68,8 @@ const Login = () => {
           </button>
         </>
       ) : (
-        <>
+        <>     
+          <h1 className="aqua-text">AQUA SAVE</h1>
           <p className="welcome-text">Bienvenido! Cada Gota Cuenta</p>
           <button className= "button-login" onClick={handleLogin}>Iniciar sesión</button>
         </>
