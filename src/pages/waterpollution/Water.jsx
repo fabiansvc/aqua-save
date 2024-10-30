@@ -2,7 +2,6 @@ import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { Physics } from "@react-three/rapier";
 import Beachtown from "./models-3d/Beachtown";
-import Board from "./models-3d/Board";
 import Staging from "../staging/Staging";
 import Controls from "../../controls/Controls";
 import Lights from "../../lights/Lights";
@@ -26,9 +25,6 @@ const Water = () => {
         <Staging />
         <Beachtown />
         <Oceanwaves />
-        {boardPositions.map((props, index) => (
-          <Board key={index} {...props} scale={0.5} />
-        ))}
       </Physics>
     </Canvas>
   );

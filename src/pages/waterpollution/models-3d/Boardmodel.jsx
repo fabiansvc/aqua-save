@@ -13,9 +13,14 @@ const Board = (props) => {
         />
       </group>
     </group>
-  )
-}
+  ); 
+}; 
+
 
 useGLTF.preload("/models-3d/board.glb")
 
-export default Board; 
+export default Boardmodel; 
+ 
+
+
+
