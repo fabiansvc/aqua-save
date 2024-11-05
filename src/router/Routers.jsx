@@ -103,7 +103,7 @@ const Routers = createBrowserRouter([
     ),
   },
   {
-    path: "/waterpollution/Treatment",
+    path: "/waterpollution/treatment",
     element: (
       <ProtectedRouter>
         <Treatment />
