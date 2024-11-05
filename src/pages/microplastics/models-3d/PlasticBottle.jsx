@@ -8,18 +8,13 @@ const PlasticBottle = (props) => {
   return (
     <group {...props} dispose={null}>
       <group name="Scene">
-        <mesh
+        <mesh 
           name="high_poly"
           geometry={nodes.high_poly.geometry}
           material={materials.Material_0}
-          scale={[50, 50, 50]}
-          position={[0,7.5,0]}
-        />
-        <mesh name = "bottle" position={[0, 2, -2]} rotation-x = {Math.PI /2} castShadow >
-            <boxGeometry args = {[2, 1, 0.2]}/>
-            <meshStandardMaterial color ={"blue"}
-            />
-        </mesh>
+          scale={0.1}
+          castShadow
+        />  
       </group>
     </group>
     );
