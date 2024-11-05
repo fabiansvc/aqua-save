@@ -1,10 +1,15 @@
 import { Center, Text3D } from "@react-three/drei";
+import useSlider from "../../stores/use-slider";
 
 
 const WelcomeText = () => {
 
-  const handleText = (e) => {
-    console.log(e);
+  const { setSlider, slider } = useSlider()
+
+  const handleText = () => {
+    setSlider(!slider)
+    console.log("click", slider);
+    
   }
 
   return (
@@ -29,7 +34,7 @@ const WelcomeText = () => {
         bevelThickness={0.}
         height={0.1}
         size={0.5}
-        onClick={(e)=>handleText(e)}
+        onClick={handleText}
         >
         {'La acidificación de los océanos es el proceso por el cual el agua  del mar se vuelve más \n ácida debido al exceso de dióxido  de carbono (CO2) absorbido de la atmósfera.'}
         <meshStandardMaterial color="a7b2b8"  />
