@@ -11,7 +11,7 @@ import Water from "../pages/waterpollution/Water.jsx";
 import Pollution from "../pages/waterpollution/Pollution.jsx";
 import Implication from "../pages/waterpollution/Implication.jsx";
 import Watercare from "../pages/waterpollution/Watercare.jsx";
-import Treatment from "../pages/waterpollution/treatment.jsx";
+import Treatment from "../pages/waterpollution/Treatment.jsx";
 
 const Routers = createBrowserRouter([
   {
@@ -103,7 +103,7 @@ const Routers = createBrowserRouter([
     ),
   },
   {
-    path: "/waterpollution/treatment",
+    path: "/waterpollution/Treatment",
     element: (
       <ProtectedRouter>
         <Treatment />
