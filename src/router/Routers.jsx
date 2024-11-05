@@ -1,5 +1,4 @@
 import Login from "../pages/login/Login.jsx";
-import Quiz from "../pages/quiz/Quiz.jsx";
 import { createBrowserRouter } from "react-router-dom";
 import PublicRouter from "./PublicRouter.jsx";
 import ProtectedRouter from "./ProtectedRouter.jsx";
@@ -9,6 +8,10 @@ import Oceanacid from "../pages/oceanacid/Oceanacid.jsx";
 import Watershortages from "../pages/watershortages/Watershortages.jsx";
 import Microplastics from "../pages/microplastics/Microplastics.jsx";
 import Water from "../pages/waterpollution/Water.jsx";
+import Pollution from "../pages/waterpollution/Pollution.jsx";
+import Implication from "../pages/waterpollution/Implication.jsx";
+import Watercare from "../pages/waterpollution/Watercare.jsx";
+import Treatment from "../pages/waterpollution/treatment.jsx";
 
 const Routers = createBrowserRouter([
   {
@@ -72,6 +75,38 @@ const Routers = createBrowserRouter([
     element: (
       <ProtectedRouter>
         <Microplastics />
+      </ProtectedRouter>
+    ),
+  },
+  {
+    path: "/waterpollution/Pollution",
+    element: (
+      <ProtectedRouter>
+        <Pollution />
+      </ProtectedRouter>
+    ),
+  },
+  {
+    path: "/waterpollution/Implication",
+    element: (
+      <ProtectedRouter>
+        <Implication />
+      </ProtectedRouter>
+    ),
+  },
+  {
+    path: "/waterpollution/Watercare",
+    element: (
+      <ProtectedRouter>
+        <Watercare />
+      </ProtectedRouter>
+    ),
+  },
+  {
+    path: "/waterpollution/Treatment",
+    element: (
+      <ProtectedRouter>
+        <Treatment />
       </ProtectedRouter>
     ),
   },

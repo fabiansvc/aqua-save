@@ -8,8 +8,8 @@ const Beachtown = (props) => {
     
     <group {...props} dispose={null}>
       <group position={[1.946, 1.53, 3.993]}>
-        <mesh geometry={nodes.Object_4.geometry} material={materials.lpb_gradient} />
-        <mesh
+        <mesh geometry={nodes.Object_4.geometry} material={materials.lpb_gradient} receiveShadow={true}/>
+        <mesh 
           geometry={nodes.Object_6.geometry}
           material={materials.lpb_gradient}
           position={[0, 1.49, 0]}
