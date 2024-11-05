@@ -1,17 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { OrbitControls } from '@react-three/drei';
+import { useThree } from '@react-three/fiber';
+
+
 
 const Controls = () => {
+  const { camera } = useThree(); 
+
+  useEffect(()=>{
+    camera.position.set(1,5,20)
+    camera.lookAt(10, 10, 10)
+  }, [camera]); 
+
   return (
     <OrbitControls
-      minAzimuthAngle={-Math.PI / 4} 
-      maxAzimuthAngle={Math.PI / 4}  
+      minAzimuthAngle={-Math.PI / 5} 
+      maxAzimuthAngle={Math.PI / 5}  
 
      
       minPolarAngle={0}        
       maxPolarAngle={Math.PI / 2.5} 
 
       enableZoom={true} 
+      minDistance={10}  
+      maxDistance={15} 
     />
   );
 };
