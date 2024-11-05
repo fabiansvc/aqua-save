@@ -1,12 +1,12 @@
 import { Canvas } from '@react-three/fiber';
 import React from 'react';
 import Staging from '../staging/Staging';
-import Controls from '../../controls/Controls';
 import WaterShortText from './WaterShortText';
 import AmbientModel from './AmbientModel';
 import Lights from '../../lights/Lights';
 import Video from './video';
 import Video2 from './video2';
+import ControlsWS from '../../controls/ControlsWS';
 
 
 
@@ -19,7 +19,7 @@ const Watershortages = () => {
   return (
 
     <Canvas camera={cameraSettings}>
-      <Controls/>
+      <ControlsWS/>
       <WaterShortText/>
       <Staging/>
       <AmbientModel/>
