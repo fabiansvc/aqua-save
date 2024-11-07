@@ -2,41 +2,46 @@ import useSlider from "../../stores/use-slider";
 import "./Slider.css";
 import Carousel from "react-bootstrap/Carousel";
 
-const Card = ({item}) => {
+const Card = ({ item }) => {
   return (
-     <div className="card-slider">
-          <h1 className="title">{item.title}</h1>
-          <p className="content">{item.subtitle}</p>
-          <img className="image" src={item.img} alt="" />
-     </div>);
+    <div className="card-slider">
+      <h1 className="title">{item.title}</h1>
+      <p className="content">{item.content}</p>
+      <img className="image" src={item.img} alt="" />
+    </div>
+  );
 };
 
-const data = [
-     {
-          title: "Acidificacion del oceano",
-          subtitle: "La acidificación de los océanos es el proceso por el cual el agua del mar se vuelve más ácida debido al exceso de dióxido de carbono (CO2) absorbido de la atmósfera.",
-          img:"/images/acidification/definition.png"
-     },
-     {
-          title: "Otro",
-          subtitle: ""
-     }
-]
 
 function Slider() {
-
-     const {slider} = useSlider() 
+  const { slider, setSlider, data } = useSlider();
 
   return (
-    <div className={`${slider ? "open" : "close"} container-slider`} >
-      <Carousel fade>
-          {data.map((item) => (
-               <Carousel.Item>
-               <Card item={item}/>
-               </Carousel.Item>
-          ))}
-      </Carousel>
-    </div>
+    <>
+      <div className={`${slider ? "open" : "close"} container-slider`}>
+        <div style={{position: "relative"}}>
+          <button className="close-button" onClick={() => setSlider(false)}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-x-circle-fill"
+              viewBox="0 0 16 16"
+            >
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z" />
+            </svg>
+          </button>
+          <Carousel fade>
+            {data.map((item) => (
+              <Carousel.Item>
+                <Card item={item} />
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        </div>
+      </div>
+    </>
   );
 }
 

@@ -16,11 +16,13 @@ import { Physics } from "@react-three/rapier";
 import Staging from "./Staging/Staging";
 import Star from "./models-3d/Star";
 
+
 const acidification = () => {
   const cameraSettings = {
-    position: [0, 5, 10],
+    position: [0, 15, 30],
     fov: 60,
   };
+
 
   const map = useMemo(
     () => [
@@ -28,8 +30,8 @@ const acidification = () => {
       { name: "back", keys: ["ArrowDown", "KeyS"] },
       { name: "left", keys: ["ArrowLeft", "KeyA"] },
       { name: "right", keys: ["ArrowRight", "KeyD"] },
-      { name: "jump", keys: ["Space"] },
-      { name: "escape", keys: ["Escape"] },
+      { name: "above", keys: ["ArrowUp", "KeyQ"] },
+      { name: "below", keys: ["ArrowAbove", "KeyE"] },
     ],
 
     []
