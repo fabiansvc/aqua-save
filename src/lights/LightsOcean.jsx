@@ -23,7 +23,7 @@ const LightsOcean = () => {
        castShadow
        color={"white"}
        position={[1,1,0]}
-       intensity={20}
+       intensity={10}
      />
 
       <ambientLight intensity={1} />
