@@ -1,20 +1,37 @@
-import { Center, Text3D } from "@react-three/drei";
-import useSlider from "../../stores/use-slider";
+import { Center, Html, Text, Text3D } from "@react-three/drei";
+
 
 
 const WelcomeText = () => {
 
-  const { setSlider, slider } = useSlider()
-
-  const handleText = () => {
-    setSlider(!slider)
-    console.log("click", slider);
-    
-  }
-
   return (
     <>
-      <Center top position={[0,12.7,1]}>
+      <Center top position={[2,6,1]}>
+        
+        <Text 
+        position={[4,-10,10]}
+        color={"white"}
+        anchorX={"right"}
+        anchorY={"bottom"}
+        font="/fonts/Blue-Ocean.ttf"
+        > {'.'} </Text>
+
+        <Html 
+          center
+          occlude
+          distanceFactor={6}
+          transform
+          position={[8,-2,0]}
+          style={{
+            color: "black",
+            fontSize: "14pt",
+            textAlign: "center",
+          }}
+        >
+          <h1> La acidificación de los océanos es el proceso por el cual el agua  del mar se vuelve más ácida debido al exceso de dióxido  de carbono (CO2) absorbido de la atmósfera </h1>          
+        </Html>
+
+
         <Text3D
           font={"/fonts/Blue Ocean_Regular.json"}
           bevelEnabled
@@ -30,66 +47,44 @@ const WelcomeText = () => {
         </Text3D>
 
       <Text3D
-        position={[-4, -2, 3]} font={"/fonts/Blue Ocean_Regular.json"}
+        position={[-3.5, -3, 6]} font={"/fonts/Blue Ocean_Regular.json"}
         bevelThickness={0.1}
         height={0.1}
         size={0.5}
-        onClick={handleText}
-        >
-        {'La acidificación de los océanos es el proceso por el cual el agua  del mar se vuelve más \n ácida debido al exceso de dióxido  de carbono (CO2) absorbido de la atmósfera.'}
-        <meshStandardMaterial color="Withe"  />
-      </Text3D>
-
-      <Text3D
-        position={[-6, -4, 6]} font={"/fonts/Blue Ocean_Regular.json"}
-        bevelThickness={0.1}
-        height={0.1}
-        size={0.5}
-        onClick={handleText}
-        >
-        {'Definicion'}
-        <meshStandardMaterial color="purple"  />
-      </Text3D>
-
-      <Text3D
-        position={[0.2, -4, 6]} font={"/fonts/Blue Ocean_Regular.json"}
-        bevelThickness={0.1}
-        height={0.1}
-        size={0.5}
-        onClick={handleText}
+        
         >
         {'Causas'}
         <meshStandardMaterial color="purple"  />
       </Text3D>
 
       <Text3D
-        position={[6, -4, 6]} font={"/fonts/Blue Ocean_Regular.json"}
+        position={[3, -3, 6]} font={"/fonts/Blue Ocean_Regular.json"}
         bevelThickness={0.1}
         height={0.1}
         size={0.5}
-        onClick={handleText}
+     
         >
         {'Medicion'}
         <meshStandardMaterial color="purple"  />
       </Text3D>
 
       <Text3D
-        position={[12, -4, 6]} font={"/fonts/Blue Ocean_Regular.json"}
+        position={[9.5, -3, 6]} font={"/fonts/Blue Ocean_Regular.json"}
         bevelThickness={0.1}
         height={0.1}
         size={0.5}
-        onClick={handleText}
+    
         >
         {'Problemas'}
         <meshStandardMaterial color="purple"  />
       </Text3D>
 
       <Text3D
-        position={[19, -4, 6]} font={"/fonts/Blue Ocean_Regular.json"}
+        position={[16, -3, 6]} font={"/fonts/Blue Ocean_Regular.json"}
         bevelThickness={0.1}
         height={0.1}
         size={0.5}
-        onClick={handleText}
+        
         >
         {'Soluciones'}
         <meshStandardMaterial color="purple"  />
