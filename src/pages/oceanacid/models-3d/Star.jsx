@@ -1,10 +1,10 @@
 import { useGLTF } from "@react-three/drei";
 import { RigidBody } from "@react-three/rapier";
 import useSlider from "../../../stores/use-slider";
-import { dataMeasurement } from "../../../Locales/dataMeasurement";
-import { dataCauses } from "../../../Locales/dataCauses";
-import { dataProblem } from "../../../Locales/dataProblem";
-import { dataSolution } from "../../../Locales/dataSolution";
+import { dataMeasurement } from "../../../Locals/dataMeasurement";
+import { dataCauses } from "../../../Locals/dataCauses";
+import { dataProblem } from "../../../Locals/dataProblem";
+import { dataSolution } from "../../../Locals/dataSolution";
 
 const Star = (props) => {
   const { nodes, materials } = useGLTF("models-3d/acidification/star.glb");
