@@ -8,6 +8,7 @@ import LightsAcuaticSystem from '../../lights/LightsAcuaticSystem';
 import TextM from './TextM.jsx';
 import Staging from '../staging/Staging.jsx';
 import RainDrop from './models-3d/RainDrop.jsx';
+import Slider from '../../components/slider/Slider.jsx';
 
 
 const Microplastics = () => {
@@ -25,6 +26,7 @@ const Microplastics = () => {
     []);
   return (
     <>
+      <Slider/>
       <Canvas shadows={true} camera = {{position: [0, 1, 2], fov: 75}}>
         <OrbitControls makeDefault/>
         <LightsAcuaticSystem/>

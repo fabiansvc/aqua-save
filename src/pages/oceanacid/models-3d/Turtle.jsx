@@ -50,11 +50,7 @@ const Turtle = (props) => {
     else if (below) {
       turtleRef.current.position.y += -1 * delta;
     }
-
-
-   
-
-   
+ 
    
     const pressed = get().back;
     
