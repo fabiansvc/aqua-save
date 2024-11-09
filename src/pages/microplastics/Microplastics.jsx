@@ -1,31 +1,44 @@
 import { Canvas } from '@react-three/fiber';
 import "./Microplastics.css"; 
-import React from 'react';
+import React, { useMemo } from 'react';
 import PlasticBottle from './models-3d/PlasticBottle';
-import { OrbitControls, SoftShadows } from '@react-three/drei';
+import {KeyboardControls, OrbitControls} from '@react-three/drei';
 import AquaticSystem from './models-3d/AquaticSystem';
-import LightsPlastic from '../../lights/LightsPlastic';
 import LightsAcuaticSystem from '../../lights/LightsAcuaticSystem';
+import TextM from './TextM.jsx';
+import Staging from '../staging/Staging.jsx';
+import RainDrop from './models-3d/RainDrop.jsx';
+import Slider from '../../components/slider/Slider.jsx';
 
 
 const Microplastics = () => {
+  const map = useMemo(() =>
+    [
+      {name: "forward", keys: ["ArrowUp"]},
+      {name: "back", keys:["ArrowDown"]},
+      {name: "left", keys:["ArrowLeft"]},
+      {name: "right", keys:["ArrowRight"]},
+      {name: "jump", keys: ["KeyW"]},
+      {name: "down", keys:["KeyD"]}
+      
+
+    ],
+    []);
   return (
     <>
-    <div className="plastic">
-      <h1>Micro plásticos en el agua</h1>
-      <p>Los micro plásticos son pequeñas partículas de plástico de menos de 5 milímetros que se han convertido en una de las mayores amenazas para nuestros océanos y ríos. Estos diminutos fragmentos, provenientes de productos cotidianos como botellas, bolsas y microfibras de ropa, se descomponen en partículas cada vez más pequeñas que contaminan nuestros ecosistemas acuáticos y afectan a una gran variedad de especies marinas.</p>
-      </div>
-      <Canvas shadows={true} camera = {{position: [0, 5, 10], fov: 100}}>
+      <Slider/>
+      <Canvas shadows={true} camera = {{position: [0, 1, 2], fov: 75}}>
         <OrbitControls makeDefault/>
-        <LightsPlastic/>
         <LightsAcuaticSystem/>
-        <ambientLight position={[2,5,0]} intensity={-0.9}/>
-        <SoftShadows size ={50} samples={20} focus={1} />
+        <KeyboardControls map={map}>
         <PlasticBottle /> 
+        </KeyboardControls>
         <AquaticSystem />
+        <TextM/>
+        <Staging/>
+        <RainDrop/>
       </Canvas>
-    </>
-    
+    </>   
   );
 };
 

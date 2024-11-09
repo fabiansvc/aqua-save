@@ -1,7 +1,7 @@
 import { useHelper } from "@react-three/drei";
 import { useRef } from "react";
 
-const LightsAcuaticSystem =() => {
+const LightsAcuaticSystem = () => {
   const directionalLightRef = useRef();
   useHelper(directionalLightRef);
 
@@ -11,45 +11,41 @@ const LightsAcuaticSystem =() => {
   const spotLightRef = useRef();
   useHelper(spotLightRef);
 
-    return (
-      <>
-        <ambientLight intensity={1}/>
-        <directionalLight 
+  return (
+    <>
+      <ambientLight intensity={1} />
+      <directionalLight
         ref={directionalLightRef}
-        castShadow
-        position={[90,200,100]} 
-        intensity={5}
-        shadow-mapSice={[100, 100]}
-        shadow-camera-far={10}
-        shadow-camera-left={-1}
-        shadow-camera-right={1}
+        position={[5, 5, 5]}
+        intensity={3}
+        shadow-mapSize={[1024, 1024]}
+        shadow-camera-far={20}
+        shadow-camera-left={-10}
+        shadow-camera-right={10}
         shadow-camera-top={10}
         shadow-camera-bottom={-10}
-          />
-        <pointLight
+        shadow-normalBias={0.05}
+        castShadow
+      />
+      <pointLight
         ref={pointLightRef}
-        castShadow
-        position={[90,20,100]}
-        intensity={5}
-        shadow-camera-far={8}
-        shadow-camera-left={-1}
-        shadow-camera-right={1}
-        shadow-camera-top={8}
-        shadow-camera-bottom={-8}
-        />
-        <spotLight
-        ref={spotLightRef}
-        castShadow
-        position={[90,20,100]}
-        intensity={5}
-        shadow-camera-far={10}
-        shadow-camera-left={-1}
-        shadow-camera-right={1}
+        position={[0, 5, 0]}
+        intensity={7}
+        shadow-camera-far={15}
+        shadow-camera-left={-12}
+        shadow-camera-right={12}
         shadow-camera-top={10}
         shadow-camera-bottom={-10}
-        />
-      </>
-    );
+        castShadow
+      />
+      <spotLight
+        ref={spotLightRef}
+        position={[5, 5, 5]}
+        intensity={5}
+        castShadow        
+      />
+    </>
+  );
 };
 
 export default LightsAcuaticSystem;

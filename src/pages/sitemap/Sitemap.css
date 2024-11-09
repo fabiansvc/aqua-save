@@ -1,10 +1,9 @@
 
 .sitemap-container {
-  border: 2px solid #000; 
   font-family: Georgia, serif;
   position: relative;
   padding: 20px;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   background-color: #d3edf7;
   border-radius: 8px;
