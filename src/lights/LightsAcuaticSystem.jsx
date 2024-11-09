@@ -17,7 +17,7 @@ const LightsAcuaticSystem = () => {
       <directionalLight
         ref={directionalLightRef}
         position={[5, 5, 5]}
-        intensity={5}
+        intensity={3}
         shadow-mapSize={[1024, 1024]}
         shadow-camera-far={20}
         shadow-camera-left={-10}
@@ -30,12 +30,12 @@ const LightsAcuaticSystem = () => {
       <pointLight
         ref={pointLightRef}
         position={[0, 5, 0]}
-        intensity={5}
-        shadow-camera-far={8}
-        shadow-camera-left={-10}
-        shadow-camera-right={10}
-        shadow-camera-top={8}
-        shadow-camera-bottom={-8}
+        intensity={7}
+        shadow-camera-far={15}
+        shadow-camera-left={-12}
+        shadow-camera-right={12}
+        shadow-camera-top={10}
+        shadow-camera-bottom={-10}
         castShadow
       />
       <spotLight
