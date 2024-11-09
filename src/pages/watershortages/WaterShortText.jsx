@@ -21,7 +21,7 @@ const WaterShortText = () => {
             <Html transform  distanceFactor={2.3} position={[-2.1,2.7,-2]}>
                 <h2>PREVENCION DE LA ESCASEZ DEL AGUA</h2>
             </Html>
-            <Html transform  distanceFactor={2.3} position={[2.1,2.7,-2]}>
+            <Html transform  distanceFactor={2.3} position={[1.93,2.7,-2]}>
                 <h2>CAUSAS Y CONSECUENCIAS</h2>
             </Html>
             </>

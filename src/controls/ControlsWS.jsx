@@ -14,6 +14,7 @@ const ControlsWS = () => {
 
   return (
     <OrbitControls
+  
       minAzimuthAngle={-Math.PI / 5} 
       maxAzimuthAngle={Math.PI / 5}  
 
@@ -21,8 +22,8 @@ const ControlsWS = () => {
       minPolarAngle={0}        
       maxPolarAngle={Math.PI / 2.5} 
 
-      enableZoom={true} 
-      minDistance={6}  
+      enableZoom={false} 
+      minDistance={6.5}  
       maxDistance={0.5}
       
       
