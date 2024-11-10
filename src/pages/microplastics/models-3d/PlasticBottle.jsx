@@ -27,7 +27,7 @@ const PlasticBottle = (props) => {
       //PlasticBottleRef.current.position.y += 0.01 * delta
       //PlasticBottleRef.current.position.x = Math.cos(state.clock.elapsedTime * 0.1)
 
-      if (forward && PlasticBottleRef.current.position.z > -10) {
+      if (forward) {
         PlasticBottleRef.current.position.z -=0.1 * delta;
       }
       if (back) {
