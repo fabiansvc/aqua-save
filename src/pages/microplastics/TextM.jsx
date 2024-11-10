@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const TextM = () => {
 
   const handleBottle =() => {
-    alert("Para mover la botella\nArriba: W \nAbajo: D\nDerecha: -> flecha derecha\nIzquierda: <- flecha izquierda\nAdelante: flecha en dirección hacia abajo\nAtrás: flecha en dirección hacia arriba"
+    alert("Para mover la botella\nArriba: W \nAbajo: S\nDerecha: D\nIzquierda: A\nAdelante: E\nAtrás: flecha abajo"
     );
   };
 
