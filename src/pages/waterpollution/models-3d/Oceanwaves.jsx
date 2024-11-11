@@ -18,7 +18,7 @@ const Oceanwaves = (props) => {
   
 
   return (
-      <group ref={group} {...props} dispose={null}>
+      <group ref={group} {...props} dispose={null} receiveShadow>
         <group name="Sketchfab_Scene">
           <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, -1.6]} scale={0.159}>
             <group name="Root">
