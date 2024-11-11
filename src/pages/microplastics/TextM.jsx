@@ -41,24 +41,27 @@ const TextM = () => {
         {'MICROPLÁSTICOS\n   EN EL AGUA'}
         <meshNormalMaterial/>
       </Text3D>
+
       <Html 
-      occlude
-      center
-      distanceFactor={1}
-      transform
-      position={[-1.2,0.85,0]}>
-        <button className="ButtonA" onClick={handleClick}> 
-          volver al menú
-        </button>
+        occlude
+        center
+        distanceFactor={1}
+        transform
+        position={[-1.2,0.85,0]}>
+          <button className="ButtonA" onClick={handleClick}> 
+            volver al menú
+          </button>
       </Html>
+
       <Html
-      occlude
-      center
-      distanceFactor={1}
-      transform
-      position={[1.2,0.85,0]}>
-        <button className="BM" onClick={handleBottle}>Tips para mover botella</button>
+        occlude
+        center
+        distanceFactor={1}
+        transform
+        position={[1.2,0.85,0]}>
+          <button className="BM" onClick={handleBottle}>Tips para mover botella</button>
       </Html>
+
       <Html
         occlude
         center
@@ -69,6 +72,7 @@ const TextM = () => {
         <p className="tittle-text"> Haga clic en una de las gotas de agua</p>
         
       </Html>
+
       <Text3D
         position={[-1.2, 0.5, 0]} font={"/fonts/Blue Ocean_Regular.json"}
         bevelThickness={0.1}

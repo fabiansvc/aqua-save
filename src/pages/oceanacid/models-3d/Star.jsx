@@ -24,11 +24,12 @@ const Star = (props) => {
           <mesh
             name="Star1"
             geometry={nodes.Star.geometry}
+            color="blue"
             material={materials["Material_0.001"]}
             rotation={[-Math.PI / 1, 1.5, 3]}
             castShadow
             scale={1.5}
-            position={[-8.5, 12, 2]}
+            position={[-10, 9.5, 5]}
             onClick={() => handleText(dataCauses)}
           />
 
@@ -39,7 +40,7 @@ const Star = (props) => {
             rotation={[-Math.PI / 1, 1.5, 3]}
             castShadow
             scale={1.5}
-            position={[-1.5, 12, 2]}
+            position={[-3.5, 9.5, 5]}
             onClick={() => handleText(dataMeasurement)}
           />
 
@@ -50,7 +51,7 @@ const Star = (props) => {
             rotation={[-Math.PI / 1, 1.5, 3]}
             castShadow
             scale={1.5}
-            position={[5.5, 12, 2]}
+            position={[3.5, 9.5, 5]}
             onClick={() => handleText(dataProblem)}
           />
 
@@ -61,7 +62,7 @@ const Star = (props) => {
             rotation={[-Math.PI / 1, 1.5, 3]}
             castShadow
             scale={1.5}
-            position={[12, 12, 2]}
+            position={[10, 9.5, 5]}
             onClick={() => handleText(dataSolution)}
           />
         </group>
