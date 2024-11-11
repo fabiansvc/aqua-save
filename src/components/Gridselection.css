@@ -1,5 +1,5 @@
 .grid {
-  display: list-item; 
+  display: grid; 
   grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
   grid-template-rows: auto auto; /* Dos filas automáticamente ajustadas */
   gap: 5px;
@@ -11,7 +11,7 @@
   position: relative;
   width: 600px;
   height: 670px;
-  margin: 50px; /* Centrar las tarjetas */
+  margin: 150px; /* Centrar las tarjetas */
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 4px 8px rgba(0, 0, 0, 0.1);

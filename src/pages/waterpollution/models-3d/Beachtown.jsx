@@ -7,18 +7,20 @@ const Beachtown = (props) => {
   return (
     
     <group {...props} dispose={null}>
-      <group position={[1.946, 1.53, 3.993]}>
-        <mesh geometry={nodes.Object_4.geometry} material={materials.lpb_gradient} receiveShadow={true}/>
+      <group position={[1.946, 1.53, 3.993]} castShadow receiveShadow>
+        <mesh geometry={nodes.Object_4.geometry} material={materials.lpb_gradient} />
         <mesh 
           geometry={nodes.Object_6.geometry}
           material={materials.lpb_gradient}
           position={[0, 1.49, 0]}
           scale={[0.99, 1, 0.969]}
+          castShadow receiveShadow
         />
         <mesh
           geometry={nodes.Object_8.geometry}
           material={materials.lpb_gradient}
           position={[0.018, 0.332, 0.744]}
+          castShadow receiveShadow
         />
         <mesh
           geometry={nodes.Object_10.geometry}
@@ -26,17 +28,20 @@ const Beachtown = (props) => {
           position={[-0.008, 0.896, 0.827]}
           rotation={[0, -Math.PI / 2, 0]}
           scale={[0.562, 0.507, 0.649]}
+          castShadow receiveShadow
         />
         <mesh
           geometry={nodes.Object_12.geometry}
           material={materials.lpb_gradient}
           rotation={[0, Math.PI / 2, 0]}
+          castShadow receiveShadow
         />
         <mesh
           geometry={nodes.Object_14.geometry}
           material={materials.lpb_gradient}
           position={[0.833, 0.896, 0.016]}
           scale={[0.562, 0.507, 0.649]}
+          castShadow receiveShadow
         />
         <mesh
           geometry={nodes.Object_16.geometry}
@@ -44,17 +49,20 @@ const Beachtown = (props) => {
           position={[-0.832, 0.896, -0.021]}
           rotation={[-Math.PI, 0, -Math.PI]}
           scale={[0.562, 0.507, 0.649]}
+          castShadow receiveShadow
         />
         <mesh
           geometry={nodes.Object_18.geometry}
           material={materials.lpb_gradient}
           rotation={[0, -Math.PI / 2, 0]}
+          castShadow receiveShadow
         />
         <mesh
           geometry={nodes.Object_20.geometry}
           material={materials.lpb_gradient_metal}
           position={[0, 2.436, 0.343]}
           scale={0.536}
+          castShadow receiveShadow
         />
         <mesh
           geometry={nodes.Object_22.geometry}
@@ -85,17 +93,20 @@ const Beachtown = (props) => {
           position={[1.004, 0.896, -0.042]}
           rotation={[0, -Math.PI / 2, 0]}
           scale={[0.562, 0.507, 0.649]}
+          castShadow receiveShadow
         />
         <mesh
           geometry={nodes.Object_28.geometry}
           material={materials.lpb_gradient}
           position={[1.025, 0, -0.781]}
+          castShadow receiveShadow
         />
         <mesh
           geometry={nodes.Object_30.geometry}
           material={materials.lpb_gradient}
           position={[0, 1.49, 0]}
           scale={[0.99, 1, 0.969]}
+          castShadow receiveShadow
         />
         <mesh
           geometry={nodes.Object_32.geometry}
@@ -153,7 +164,7 @@ const Beachtown = (props) => {
           rotation={[Math.PI / 2, 0, 0]}
         />
       </group>
-      <group position={[-1.257, 1.53, -1.125]}>
+      <group position={[-1.257, 1.53, -1.125]} castShadow receiveShadow>
         <mesh geometry={nodes.Object_61.geometry} material={materials.lpb_gradient} />
         <group position={[0.694, -0.017, -0.77]} rotation={[0, Math.PI / 2, 0]}>
           <mesh geometry={nodes.Object_73.geometry} material={materials.lpb_gradient} />
@@ -162,15 +173,17 @@ const Beachtown = (props) => {
             material={materials.lpb_gradient}
             position={[0, 1.49, 0]}
             scale={[0.99, 1, 0.969]}
+            castShadow receiveShadow
           />
         </group>
-        <group position={[-0.286, 1.209, -1.022]}>
+        <group position={[-0.286, 1.209, -1.022]} castShadow receiveShadow>
           <mesh geometry={nodes.Object_101.geometry} material={materials.lpb_gradient} />
           <mesh
             geometry={nodes.Object_103.geometry}
             material={materials.lpb_gradient}
             position={[0, 1.49, 0]}
             scale={[0.99, 1, 0.969]}
+            castShadow receiveShadow
           />
         </group>
         <mesh
@@ -287,7 +300,7 @@ const Beachtown = (props) => {
           rotation={[Math.PI / 2, 0, 0]}
         />
       </group>
-      <group position={[-4.106, 1.53, 1.944]}>
+      <group position={[-4.106, 1.53, 1.944]} castShadow receiveShadow>
         <mesh geometry={nodes.Object_107.geometry} material={materials.lpb_gradient} />
         <mesh
           geometry={nodes.Object_109.geometry}
@@ -375,7 +388,7 @@ const Beachtown = (props) => {
           rotation={[0, -Math.PI / 2, 0]}
         />
       </group>
-      <group position={[-9.273, 1.53, 3.163]} rotation={[0, Math.PI / 2, 0]}>
+      <group position={[-9.273, 1.53, 3.163]} rotation={[0, Math.PI / 2, 0]} castShadow receiveShadow>
         <mesh geometry={nodes.Object_139.geometry} material={materials.lpb_gradient} />
         <mesh
           geometry={nodes.Object_141.geometry}
@@ -419,7 +432,7 @@ const Beachtown = (props) => {
           rotation={[0, -Math.PI / 2, 0]}
         />
       </group>
-      <group position={[2.007, 1.53, -6.224]}>
+      <group position={[2.007, 1.53, -6.224]} castShadow receiveShadow>
         <mesh geometry={nodes.Object_155.geometry} material={materials.lpb_gradient} />
         <mesh
           geometry={nodes.Object_157.geometry}
@@ -463,7 +476,7 @@ const Beachtown = (props) => {
           rotation={[0, -Math.PI / 2, 0]}
         />
       </group>
-      <group position={[-4.106, 0.467, 1.944]}>
+      <group position={[-4.106, 0.467, 1.944]} castShadow receiveShadow>
         <mesh geometry={nodes.Object_171.geometry} material={materials.lpb_gradient} />
         <mesh
           geometry={nodes.Object_173.geometry}
@@ -505,7 +518,7 @@ const Beachtown = (props) => {
           scale={[0.988, 0.683, 0.992]}
         />
       </group>
-      <group position={[1.935, 0.467, 3.993]}>
+      <group position={[1.935, 0.467, 3.993]} castShadow receiveShadow>
         <mesh geometry={nodes.Object_185.geometry} material={materials.lpb_gradient} />
         <mesh
           geometry={nodes.Object_187.geometry}
@@ -547,7 +560,7 @@ const Beachtown = (props) => {
           scale={[0.125, 0.167, 0.058]}
         />
       </group>
-      <group position={[8.896, 0.467, -1.078]}>
+      <group position={[8.896, 0.467, -1.078]} castShadow receiveShadow>
         <mesh geometry={nodes.Object_199.geometry} material={materials.lpb_gradient} />
         <mesh
           geometry={nodes.Object_201.geometry}
@@ -589,7 +602,7 @@ const Beachtown = (props) => {
           scale={[0.125, 0.167, 0.058]}
         />
       </group>
-      <group position={[-1.475, 0.467, -1.095]}>
+      <group position={[-1.475, 0.467, -1.095]} castShadow receiveShadow>
         <mesh geometry={nodes.Object_213.geometry} material={materials.lpb_gradient} />
         <mesh
           geometry={nodes.Object_215.geometry}
@@ -631,7 +644,7 @@ const Beachtown = (props) => {
           scale={[0.125, 0.167, 0.058]}
         />
       </group>
-      <group position={[-8.983, 0.467, -1.036]}>
+      <group position={[-8.983, 0.467, -1.036]} castShadow receiveShadow>
         <mesh geometry={nodes.Object_227.geometry} material={materials.lpb_gradient} />
         <mesh
           geometry={nodes.Object_229.geometry}
@@ -673,7 +686,7 @@ const Beachtown = (props) => {
           scale={[0.125, 0.167, 0.058]}
         />
       </group>
-      <group position={[-9.091, 0.467, 3.965]}>
+      <group position={[-9.091, 0.467, 3.965]} castShadow receiveShadow>
         <mesh geometry={nodes.Object_241.geometry} material={materials.lpb_gradient} />
         <mesh
           geometry={nodes.Object_243.geometry}
@@ -715,7 +728,7 @@ const Beachtown = (props) => {
           scale={[0.125, 0.167, 0.058]}
         />
       </group>
-      <group position={[1.986, 0.467, -6.133]}>
+      <group position={[1.986, 0.467, -6.133]} castShadow receiveShadow>
         <mesh geometry={nodes.Object_255.geometry} material={materials.lpb_gradient} />
         <mesh
           geometry={nodes.Object_257.geometry}
@@ -799,7 +812,7 @@ const Beachtown = (props) => {
           scale={[0.125, 0.167, 0.058]}
         />
       </group>
-      <group position={[3.984, 0.467, -1.078]}>
+      <group position={[3.984, 0.467, -1.078]} castShadow receiveShadow>
         <mesh geometry={nodes.Object_283.geometry} material={materials.lpb_gradient} />
         <mesh
           geometry={nodes.Object_285.geometry}
@@ -841,7 +854,7 @@ const Beachtown = (props) => {
           scale={[0.125, 0.167, 0.058]}
         />
       </group>
-      <group position={[7.902, 0.467, 2.973]}>
+      <group position={[7.902, 0.467, 2.973]} castShadow receiveShadow>
         <mesh geometry={nodes.Object_297.geometry} material={materials.lpb_gradient} />
         <mesh
           geometry={nodes.Object_299.geometry}
