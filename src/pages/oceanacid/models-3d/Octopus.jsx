@@ -13,7 +13,7 @@ const Ocean = (props) => {
 
   return (
     <RigidBody name="rbOctopus" type="fixed" colliders="cuboid">
-      <group ref={octopusRef} {...props} dispose={null} position={[8, 1, 8]}>
+      <group ref={octopusRef} {...props} dispose={null} position={[12, 1, 8]}>
         <group name="Scene">
           <group name="Octopus">
             <mesh

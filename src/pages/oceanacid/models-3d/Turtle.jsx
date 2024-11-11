@@ -33,10 +33,10 @@ const Turtle = (props) => {
   
     if (forward) {
       //turtleRef.current.position.x = Math.cos(state.clock.elapsedTime * 2);
-      turtleRef.current.position.z += -1 * delta;
+      turtleRef.current.position.y += 1 * delta;
     }
     else if (back) {
-      turtleRef.current.position.z += 1 * delta;
+      turtleRef.current.position.y += -1 * delta;
     }
     else if (left) {
       turtleRef.current.position.x += -1 * delta;
@@ -45,10 +45,10 @@ const Turtle = (props) => {
       turtleRef.current.position.x += 1 * delta;
     }
     else if (above) {
-      turtleRef.current.position.y += 1 * delta;
+      turtleRef.current.position.z += -1 * delta;
     }
     else if (below) {
-      turtleRef.current.position.y += -1 * delta;
+      turtleRef.current.position.z += 1 * delta;
     }
  
    
