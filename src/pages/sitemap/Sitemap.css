@@ -60,6 +60,7 @@ footer {
 
 .sitemap-container {
   position: relative;
+  padding: 20px;
   color: #333;
 }
 
@@ -116,4 +117,33 @@ ul li a:hover {
   width: 100%;
   background-color: #d3edf7 ;
   padding-top: 20px;
+  width: 100%;
+  height: 300px;
+  background-color: #e0f7fa;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #0288d1;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Ajuste para que el fondo de partículas esté detrás del contenido */
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
