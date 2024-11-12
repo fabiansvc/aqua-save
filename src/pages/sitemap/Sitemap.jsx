@@ -71,6 +71,7 @@ const Sitemap = () => {
           </p>
         </footer>
       </div>
+    </div>
   );
 };
 
