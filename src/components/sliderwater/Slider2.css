@@ -36,7 +36,7 @@
  
  .card-slider {
    width: 1200px;
-   height: 700px;
+   height: 500px;
    display: flex;
    flex-direction: column;
    justify-content: center;
