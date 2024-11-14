@@ -1,3 +1,4 @@
+import "./Oceanacid.css"; 
 import {
   ContactShadows,
   KeyboardControls,
@@ -20,18 +21,18 @@ import Star from "./models-3d/Star";
 const acidification = () => {
   const cameraSettings = {
     position: [0, 15, 30],
-    fov: 60,
+    fov: 48,
   };
 
 
   const map = useMemo(
     () => [
-      { name: "forward", keys: ["ArrowUp", "KeyW"] },
-      { name: "back", keys: ["ArrowDown", "KeyS"] },
+      { name: "forward", keys: ["ArrowAbove", "KeyW"] },
+      { name: "back", keys: ["ArrowAbove", "KeyS"] },
       { name: "left", keys: ["ArrowLeft", "KeyA"] },
       { name: "right", keys: ["ArrowRight", "KeyD"] },
       { name: "above", keys: ["ArrowUp", "KeyQ"] },
-      { name: "below", keys: ["ArrowAbove", "KeyE"] },
+      { name: "below", keys: ["ArrowDown", "KeyE"] },
     ],
 
     []

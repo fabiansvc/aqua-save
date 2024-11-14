@@ -14,14 +14,12 @@ import Slider from '../../components/slider/Slider.jsx';
 const Microplastics = () => {
   const map = useMemo(() =>
     [
-      {name: "forward", keys: ["ArrowUp"]},
+      {name: "forward", keys: ["KeyE"]},
       {name: "back", keys:["ArrowDown"]},
-      {name: "left", keys:["ArrowLeft"]},
-      {name: "right", keys:["ArrowRight"]},
+      {name: "left", keys:["KeyA"]},
+      {name: "right", keys:["KeyD"]},
       {name: "jump", keys: ["KeyW"]},
-      {name: "down", keys:["KeyD"]}
-      
-
+      {name: "down", keys:["KeyS"]},
     ],
     []);
   return (

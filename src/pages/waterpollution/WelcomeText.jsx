@@ -1,4 +1,4 @@
-import { Text3D, Text, Html } from "@react-three/drei";
+import { Text3D, Html } from "@react-three/drei";
 import { useNavigate } from "react-router-dom";
 
 const WelcomeText = () => {
