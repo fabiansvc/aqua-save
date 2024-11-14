@@ -81,11 +81,3 @@ ul li a {
 ul li a:hover {
   text-decoration: underline;
 }
-
-/* Ajuste para que el fondo de partículas esté detrás del contenido */
-#tsparticles {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}

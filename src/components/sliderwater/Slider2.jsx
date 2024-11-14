@@ -7,11 +7,14 @@ const Card = ({ item }) => {
   const navigate = useNavigate(); 
 
   return (
-    <div className="card-slider">
-      <h1 className="title">{item.title}</h1>
-      <p className="content">{item.content}</p>
+    <div className="card-slider2">
+      <h1 className="title2">{item.title}</h1>
+      <p className="content2">{item.content}
+      </p>
+
+
       <button
-        className="redirect-button"
+        className="redirect-button2"
         onClick={() => navigate(item.redirectTo)}  // Redirigir según el ítem
       >
         Ir a la página
@@ -25,9 +28,9 @@ function Slider2() {
 
   return (
     <>
-      <div className={`${slider ? "open" : "close"} container-slider`}>
+      <div className={`${slider ? "open" : "close"} container-slider2`}>
         <div style={{ position: "relative" }}>
-          <button className="close-button" onClick={() => setSlider(false)}>
+          <button className="close-button2" onClick={() => setSlider(false)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"

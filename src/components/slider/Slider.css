@@ -36,18 +36,17 @@
 
 .card-slider {
   width: 1200px;
-  height: 700px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
   align-items: center;
   background: #6bb8e241;
 }
 
 .title {
      font-family: Georgia, serif;
-     color: rgb(255, 255, 255);
+     color: #8a78cc;
      font-size: 50px;
      font-weight: 600;
      margin-top: 40px;
@@ -56,17 +55,12 @@
 .content {
      font-family: Georgia, serif;
      font-size: 30px;
-     color: rgb(246, 244, 244);
+     color: #000000;
      text-align: center;
-     padding: 0rem 2rem;
-     margin-bottom: 30px;
 }
 
 .image {
-     margin-top: 10px;
-     margin-bottom: 100px;
      display: flex;
      flex-wrap: wrap;
-     gap: 10px;
      justify-content: center;
 }

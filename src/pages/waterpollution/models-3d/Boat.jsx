@@ -14,12 +14,9 @@ const Boatmodel = (props) => {
     return unsubscribe; 
   }, [sub]);
   const speed = {
-    forward: 0.2,
-    back: 0.1,
-    left: 0.15,
-    right: 0.15,
-    jump: 0.3,
-    down: 0.3,
+    forward: 1.5,
+    back: 0.5,
+    rotation: 0.5,
   };
 
   useFrame((state, delta) => {
@@ -33,10 +30,10 @@ const Boatmodel = (props) => {
       BoatRef.current.position.x += speed.back*delta;
     }
     if (left) {
-      BoatRef.current.position.z -= speed.left*delta;
+      BoatRef.current.position.z -= speed.rotation*delta;
     }
     if (right) {
-      BoatRef.current.position.z += speed.right*delta;
+      BoatRef.current.position.z += speed.rotation*delta;
     }
   });
 
