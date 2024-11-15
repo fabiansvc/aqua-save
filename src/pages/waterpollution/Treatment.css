@@ -80,3 +80,25 @@
   font-size: 1.2rem;
   line-height: 1.6;
 }
+
+.buttonBackSite{
+  background-color: #8a78cc;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.buttonBackWater{
+  background-color: #8a78cc;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
