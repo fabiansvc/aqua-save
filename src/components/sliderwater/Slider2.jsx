@@ -15,7 +15,7 @@ const Card = ({ item }) => {
 
       <button
         className="redirect-button2"
-        onClick={() => navigate(item.redirectTo)}  // Redirigir según el ítem
+        onClick={() => navigate(item.redirectTo)} 
       >
         Ir a la página
       </button>
