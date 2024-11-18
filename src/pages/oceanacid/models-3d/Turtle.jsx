@@ -1,12 +1,18 @@
 import { useGLTF, useKeyboardControls } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { RigidBody } from "@react-three/rapier";
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 
 const Turtle = (props) => {
   const { nodes, materials } = useGLTF("models-3d/acidification/turtle.glb");
   const [sub, get] = useKeyboardControls();
   const turtleRef = useRef(null);
+  const rbTurtleRef = useRef();
+
+
+  const handleTurtle = useCallback(() => {
+    rbTurtleRef.current.applyImpulse({ x: 2, y: 2, z: 2}, true);
+  }, []);
 
   useEffect(() => {
     return sub(
@@ -58,14 +64,16 @@ const Turtle = (props) => {
   });
 
   return (
-    <RigidBody name="rbturtle" type="fixed" colliders="cuboid">
-      <group {...props} dispose={null} position={[-3, 2, 11]}>
+    <RigidBody ref={rbTurtleRef} name="rbturtle" type="fixed" colliders="ball">
+      <group {...props} dispose={null} >
         <group name="Scene">
             <mesh
+              onClick={handleTurtle}
               name="Turtle"
               ref={turtleRef}
               geometry={nodes.Turtle.geometry}
               material={materials.Material_0}
+              position={[-7, 3, 11]}
               rotation={[-Math.PI / 1, 6, 3]}
               castShadow
               scale={2}

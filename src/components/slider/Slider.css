@@ -47,7 +47,7 @@
 
 .title {
      font-family: Georgia, serif;
-     color: #8a78cc;
+     color: #000000;
      font-size: 50px;
      font-weight: 600;
 }
@@ -55,7 +55,7 @@
 .content {
      font-family: Georgia, serif;
      font-size: 30px;
-     color: #000000;
+     color: #0a0a0a;
      text-align: center;
 }
 

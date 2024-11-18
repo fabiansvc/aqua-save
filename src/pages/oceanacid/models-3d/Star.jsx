@@ -5,9 +5,11 @@ import { dataMeasurement } from "../../../Locals/dataMeasurement";
 import { dataCauses } from "../../../Locals/dataCauses";
 import { dataProblem } from "../../../Locals/dataProblem";
 import { dataSolution } from "../../../Locals/dataSolution";
+import { useRef } from "react";
 
 const Star = (props) => {
   const { nodes, materials } = useGLTF("models-3d/acidification/star.glb");
+  const rbStarRef = useRef(null);
 
   const { setSlider, slider, setData } = useSlider();
 
@@ -18,7 +20,7 @@ const Star = (props) => {
   };
 
   return (
-    <RigidBody name="rbOcean" type="fixed" colliders="cuboid">
+    <RigidBody ref={rbStarRef} name="rbOcean" type="fixed" colliders="ball">
       <group {...props} dispose={null}>
         <group name="Scene">
           <mesh
