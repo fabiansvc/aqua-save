@@ -24,8 +24,6 @@ const Turtlemodel = (props) => {
   });
   
 
-
-
   return (
     <group ref={group} {...props} dispose={null} >
       <group name="Sketchfab_Scene">
@@ -33,7 +31,7 @@ const Turtlemodel = (props) => {
           <group name="green_016_round5changes_johnsonfbx" rotation={[Math.PI / 2, 0, 0]}>
             <group name="Object_2">
               <group name="RootNode">
-                <group name="green_juvenilearmature" position={[-2.266, -2, -2.188]} rotation={[-Math.PI / 2, 0, -3.117]} scale={100}>
+                <group name="green_juvenilearmature" position={[-2.266, 2.989, -2.188]} rotation={[-Math.PI / 2, 0, -3.117]} scale={100}>
                   <group name="Object_5">
                     <primitive object={nodes._rootJoint} />
                     <skinnedMesh name="Object_40" geometry={nodes.Object_40.geometry} material={materials.greeneye} skeleton={nodes.Object_40.skeleton} />
