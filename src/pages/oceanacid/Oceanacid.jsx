@@ -16,6 +16,12 @@ import Turtle from "./models-3d/Turtle";
 import { Physics } from "@react-three/rapier";
 import Staging from "./Staging/Staging";
 import Star from "./models-3d/Star";
+import Fish from "./models-3d/Fish";
+import ControlsOcean from "../../controls/ControlsOcean";
+import StarFish from "./models-3d/StarFish";
+import Bottle from "./models-3d/Bottle";
+import Floor from "../oceanacid/models-3d/Floor"
+import Bubble from "./models-3d/Bubble";
 
 
 const acidification = () => {
@@ -43,16 +49,20 @@ const acidification = () => {
       <Slider />
       <Canvas className="ocean" shadows={true} camera={cameraSettings}>
         <LightsOcean />
-        <OrbitControls />
         <Staging/>
         <ContactShadows />
+        <OrbitControls/>
+        <ControlsOcean/>
         <Suspense>
-          <Physics debug={false}>
+          <Physics debug={false} gravity={[0,-1,0]}>
             <Ocean />
             <Octopus />
             <Star/>
+            <Bottle/>
+            <Fish position={[-15, 3, 5]} scale={0.040} />
+            <StarFish position={[1, 1, 9]} scale={2}/>
           <KeyboardControls map={map}>
-            <Turtle />
+            <Turtle/>
           </KeyboardControls>
           <WelcomeText />
           </Physics>

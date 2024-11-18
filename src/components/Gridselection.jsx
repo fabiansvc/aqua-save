@@ -42,7 +42,7 @@ const Gridselection = () => {
           onClick={() => handleClick(theme.link)}
         >
           <div className="imageContainer">
-            <img src={theme.image} alt={theme.title} className="image"/>
+            <img src={theme.image} alt={theme.title}/>
           </div>
           <h3>{theme.title}</h3>
         </div>

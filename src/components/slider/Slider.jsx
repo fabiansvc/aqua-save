@@ -5,6 +5,9 @@ import Carousel from "react-bootstrap/Carousel";
 const Card = ({ item }) => {
   return (
     <div className="card-slider">
+      {/* {item.title !== "" ? (
+        
+      ) : ""} */}
       <h1 className="title">{item.title}</h1>
       <p className="content">{item.content}</p>
       <img className="image" src={item.img} alt="" />

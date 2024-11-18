@@ -24,8 +24,6 @@ const Turtlemodel = (props) => {
   });
   
 
-
-
   return (
     <group ref={group} {...props} dispose={null} >
       <group name="Sketchfab_Scene">
