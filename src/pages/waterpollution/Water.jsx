@@ -42,7 +42,7 @@ const Water = () => {
       <Canvas shadows={true}>
         <Controls />
         <Lights />
-        <Physics debug={true} gravity={[0, -1, 0]}>
+        <Physics gravity={[0, -1, 0]}>
           <WelcomeText castShadow receiveShadow/>
           <Staging />
           <Beachtown />
