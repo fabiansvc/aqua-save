@@ -1,5 +1,5 @@
 import React from "react";
-import "./Treatment.css";
+import "./Implication.css";
 import { Canvas } from "@react-three/fiber";
 import Coral from "./models-3d/Coral";
 import { OrbitControls } from "@react-three/drei";

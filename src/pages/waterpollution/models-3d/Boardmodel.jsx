@@ -65,6 +65,9 @@ const Boardmodel = (props) => {
           rotation={[0, 1.6, 0]}
           fontSize={0.2}
           color="purple"
+          style={{
+            fontFamily: "Georgia, serif"
+          }}
         >
           Contaminación
         </Text>
@@ -111,6 +114,9 @@ const Boardmodel = (props) => {
           fontSize={0.2}
           rotation={[0, 1.6, 0]}
           color="purple"
+          style={{
+            fontFamily: "Georgia, serif"
+          }}
         >
           Tratamiento del agua
         </Text>
@@ -157,6 +163,9 @@ const Boardmodel = (props) => {
           fontSize={0.2}
           color="purple"
           rotation={[0, 1.6, 0]}
+          style={{
+            fontFamily: "Georgia, serif"
+          }}
         >
           Cuidados del agua
         </Text>
@@ -203,6 +212,9 @@ const Boardmodel = (props) => {
           rotation={[0, 1.6, 0]}
           fontSize={0.2}
           color="purple"
+          style={{
+            fontFamily: "Georgia, serif"
+          }}
         >
           Implicaciones empresas y personas
         </Text>
