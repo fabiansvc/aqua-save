@@ -1,5 +1,4 @@
 import { useGLTF } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
 import { RigidBody } from "@react-three/rapier";
 import { useCallback, useRef } from "react";
 
@@ -9,18 +8,15 @@ const Bottle = (props) => {
   const rbBottleRef = useRef();
   const { nodes, materials } = useGLTF("/models-3d/acidification/bottle.glb");
 
-  useFrame(() => {
-    rbBottleRef.current.addForce({x: 0, y: -0.2, z: 0.1}, true);
-  });
 
   const handleBottle = useCallback(() => {
-    rbBottleRef.current.applyImpulse({ x: 0, y: 5, z: -5}, true);
+    rbBottleRef.current.applyImpulse({ x: 0.5, y: -0.2, z: -1}, true);
   }, []);
 
 
   return (
     <RigidBody 
-    gravityScale={0.5} 
+    gravityScale={0.3} 
     ref={rbBottleRef} 
     name="rbbottle" 
     type="dynamic" 
@@ -46,7 +42,7 @@ const Bottle = (props) => {
           onClick={handleBottle}
           castShadow
           receiveShadow
-          position={[14,15,0]}
+          position={[16,15,2]}
           geometry={nodes.high_poly.geometry}
           material={materials.Material_0}
           />

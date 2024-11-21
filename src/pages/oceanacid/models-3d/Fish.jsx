@@ -28,6 +28,7 @@ const Fish = (props) => {
                   <group name="Object_6" />
                   <skinnedMesh
                     name="Object_7"
+                    castShadow
                     geometry={nodes.Object_7.geometry}
                     material={materials.Fish_001}
                     skeleton={nodes.Object_7.skeleton}
