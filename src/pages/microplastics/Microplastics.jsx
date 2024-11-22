@@ -12,6 +12,11 @@ import Slider from "../../components/slider/Slider.jsx";
 import { Physics } from "@react-three/rapier";
 import BeachBall from "./models-3d/BeachBall.jsx";
 import HermitCrab from "./models-3d/HermitCrab.jsx";
+import MicroVideo from "./MicroVideo.jsx";
+import PostProcessing from "./postprocessing/PostProcessing";
+
+
+
 
 const Microplastics = () => {
   const map = useMemo(
@@ -41,7 +46,9 @@ const Microplastics = () => {
         <HermitCrab position={[0.35, -0.1, 0.3]} scale={0.07} />
         <TextM />
         <Staging />
+        <PostProcessing/>
         <RainDrop />
+        <MicroVideo name="S" position={[2.6,0.5,-2.2]} scale={1}/>
       </Canvas>
     </>
   );
