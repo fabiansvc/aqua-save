@@ -17,16 +17,16 @@ const TextM = () => {
   return (
     <>
         <Text
-        position={[-0.01, 0.9, 0]}
+        position={[-0.01, 1.1, 0]}
         fontSize={0.1}
         color={"purple"}
         font="/fonts/Blue-Ocean.ttf"
       >
         {" "}
-        Conoce sobre los 
+        Conocer sobre los 
       </Text>
       <Text3D
-        position={[-0.8, 0.7, 0]}
+        position={[-0.8, 0.9, 0]}
         anchorX="center"
         anchorY="middle"
         font={"/fonts/Blue Ocean_Regular.json"}
@@ -65,13 +65,22 @@ const TextM = () => {
       <Html
         occlude
         center
-        distanceFactor={0.7}
+        distanceFactor={1}
         transform
-        position={[-0.01, 0.5, 0]}
+        position={[-0.01,1.2, 0]}
       >
-        <p className="tittle-text"> Haga clic en una de las gotas de agua</p>
+        <p className="tittle-text"> Haga clic en una de las gotas de agua para</p>
         
       </Html>
+      <Text
+        position={[-0.01, 0.67, 0]}
+        fontSize={0.1}
+        color={"purple"}
+        font="/fonts/Blue-Ocean.ttf"
+      >
+        {" "}
+        Haga clic en la botella para ver las soluciones
+      </Text>
 
       <Text3D
         position={[-1.2, 0.5, 0]} font={"/fonts/Blue Ocean_Regular.json"}

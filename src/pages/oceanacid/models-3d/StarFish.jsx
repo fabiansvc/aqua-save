@@ -32,12 +32,14 @@ const StarFish = (props) => {
                   <group name="GLTF_created_0">
                     <skinnedMesh
                       name="Object_7"
+                      castShadow
                       geometry={nodes.Object_7.geometry}
                       material={materials.Starfish}
                       skeleton={nodes.Object_7.skeleton}
                     />
                     <skinnedMesh
                       name="Object_8"
+                      
                       geometry={nodes.Object_8.geometry}
                       material={materials.Underside}
                       skeleton={nodes.Object_8.skeleton}

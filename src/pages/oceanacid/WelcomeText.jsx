@@ -31,7 +31,7 @@ const WelcomeText = () => {
         <Text3D
           font={"/fonts/Blue Ocean_Regular.json"}
           bevelEnabled
-          position={[0,13,0]}
+          position={[-2,13,0]}
           bevelSize={0.02}
           bevelThickness={0.1}
           height={0.5}
@@ -45,7 +45,7 @@ const WelcomeText = () => {
 
         <Html 
           center
-          position={[8,11.5,0]}
+          position={[6,11,0]}
           occlude
           distanceFactor={6}
           transform
@@ -68,7 +68,7 @@ const WelcomeText = () => {
         
         >
         {'Causas'}
-        <meshStandardMaterial color="blue"/>
+        <meshStandardMaterial color="#8a78cc"/>
       </Text3D>
 
       <Text3D
@@ -79,7 +79,7 @@ const WelcomeText = () => {
      
         >
         {'Medicion'}
-        <meshStandardMaterial  color="blue"/>
+        <meshStandardMaterial  color="#8a78cc"/>
       </Text3D>
 
       <Text3D
@@ -90,7 +90,7 @@ const WelcomeText = () => {
     
         >
         {'Problemas'}
-        <meshStandardMaterial  color="blue"/>
+        <meshStandardMaterial  color="#8a78cc"/>
       </Text3D>
 
       <Text3D
@@ -101,7 +101,7 @@ const WelcomeText = () => {
         
         >
         {'Soluciones'}
-        <meshStandardMaterial  color="blue"/>
+        <meshStandardMaterial  color="#8a78cc"/>
       </Text3D>
 
       <Html
