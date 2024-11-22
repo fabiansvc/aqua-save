@@ -23,7 +23,7 @@ const TextM = () => {
         font="/fonts/Blue-Ocean.ttf"
       >
         {" "}
-        Conoce sobre los 
+        Conocer sobre los 
       </Text>
       <Text3D
         position={[-0.8, 0.9, 0]}
@@ -79,7 +79,7 @@ const TextM = () => {
         font="/fonts/Blue-Ocean.ttf"
       >
         {" "}
-        Haga clic en la botella para las soluciones
+        Haga clic en la botella para ver las soluciones
       </Text>
 
       <Text3D
