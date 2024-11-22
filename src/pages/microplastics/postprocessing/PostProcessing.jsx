@@ -5,8 +5,8 @@ import { BlendFunction } from "postprocessing";
 const PostProcessing = () => {
   return <EffectComposer>
     <Vignette
-        offset={0.5}
-        darkness={1}
+        offset={0.3}
+        darkness={1.5}
         eskil={false}
         blendFunction={BlendFunction.NORMAL}
     />
