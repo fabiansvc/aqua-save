@@ -15,14 +15,13 @@ const Card = ({ item }) => {
   );
 };
 
-
 function Slider() {
   const { slider, setSlider, data } = useSlider();
 
   return (
     <>
       <div className={`${slider ? "open" : "close"} container-slider`}>
-        <div style={{position: "relative"}}>
+        <div style={{ position: "relative" }}>
           <button className="close-button" onClick={() => setSlider(false)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"

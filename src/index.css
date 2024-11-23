@@ -4,8 +4,7 @@ body,
   user-select: none;
 }
 
-body{
-  
+body {
   height: 100%;
 }
 
@@ -21,7 +20,6 @@ button {
   margin-bottom: 100px;
   margin-top: 30px;
   margin-left: 20px;
-  
 }
 
 button:hover {

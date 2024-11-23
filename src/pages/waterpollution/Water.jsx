@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Physics } from "@react-three/rapier";
 import Beachtown from "./models-3d/Beachtown";
@@ -11,8 +11,7 @@ import Boardmodel from "./models-3d/Boardmodel";
 import Boatmodel from "./models-3d/Boat";
 import Slider2 from "../../components/sliderwater/Slider2";
 import { KeyboardControls, Loader } from "@react-three/drei";
-import { useMemo } from 'react';
-
+import { useMemo } from "react";
 
 const Water = () => {
   const map = useMemo(
@@ -43,7 +42,7 @@ const Water = () => {
         <Controls />
         <Lights />
         <Physics>
-          <WelcomeText castShadow receiveShadow/>
+          <WelcomeText castShadow receiveShadow />
           <Staging />
           <Beachtown />
           <Oceanwaves />
@@ -53,7 +52,7 @@ const Water = () => {
           </KeyboardControls>
         </Physics>
       </Canvas>
-      <Loader/>
+      <Loader />
     </>
   );
 };

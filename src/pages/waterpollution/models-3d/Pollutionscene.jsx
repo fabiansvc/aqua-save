@@ -1,16 +1,16 @@
-import React, { useRef, useEffect } from 'react'
-import { useGLTF } from '@react-three/drei'
-import { useThree } from '@react-three/fiber';
+import { useEffect } from "react";
+import { useGLTF } from "@react-three/drei";
+import { useThree } from "@react-three/fiber";
 
 const Pollutionscene = (props) => {
-  const { nodes, materials } = useGLTF("/models-3d/pollution.glb"); 
+  const { nodes, materials } = useGLTF("/models-3d/pollution.glb");
 
   const { camera } = useThree();
 
   useEffect(() => {
     camera.position.set(0, 20, 15);
     camera.lookAt(0, 0, 0);
-  }, [camera]); 
+  }, [camera]);
 
   return (
     <group {...props} dispose={null}>
@@ -67,9 +67,9 @@ const Pollutionscene = (props) => {
         </group>
       </group>
     </group>
-  )
-}
+  );
+};
 
-useGLTF.preload("/models-3d/pollution.glb"); 
+useGLTF.preload("/models-3d/pollution.glb");
 
-export default Pollutionscene; 
+export default Pollutionscene;

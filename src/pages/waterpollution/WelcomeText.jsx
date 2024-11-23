@@ -5,7 +5,7 @@ const WelcomeText = () => {
   const navigate = useNavigate();
 
   const handleCLick = () => {
-    navigate("/Sitemap");
+    navigate("/sitemap");
   };
 
   return (
@@ -23,9 +23,12 @@ const WelcomeText = () => {
           textAlign: "center",
         }}
       >
-        <h1> La contaminación del agua es el principal problema actualmente, <br />
-          debido a que es uno de nuestros soportes vitales,<br /> a continuación te presentare sus causas y cuidados
-          </h1>
+        <h1>
+          {" "}
+          La contaminación del agua es el principal problema actualmente, <br />
+          debido a que es uno de nuestros soportes vitales,
+          <br /> a continuación te presentare sus causas y cuidados
+        </h1>
       </Html>
       <Text3D
         position={[-8, 9, -5]}

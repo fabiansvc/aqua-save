@@ -7,7 +7,7 @@ import { dataWatercare } from "../../../Locals/dataWatercare";
 
 const Boardmodel = (props) => {
   const { nodes, materials } = useGLTF("models-3d/WoodenSigns.glb");
-  const { setSlider, slider, setData } = useSlider();
+  const { setSlider, setData } = useSlider();
 
   const handleText = (data) => {
     setData(data);
@@ -66,7 +66,7 @@ const Boardmodel = (props) => {
           fontSize={0.2}
           color="purple"
           style={{
-            fontFamily: "Georgia, serif"
+            fontFamily: "Georgia, serif",
           }}
         >
           Contaminación
@@ -115,7 +115,7 @@ const Boardmodel = (props) => {
           rotation={[0, 1.6, 0]}
           color="purple"
           style={{
-            fontFamily: "Georgia, serif"
+            fontFamily: "Georgia, serif",
           }}
         >
           Tratamiento del agua
@@ -164,7 +164,7 @@ const Boardmodel = (props) => {
           color="purple"
           rotation={[0, 1.6, 0]}
           style={{
-            fontFamily: "Georgia, serif"
+            fontFamily: "Georgia, serif",
           }}
         >
           Cuidados del agua
@@ -213,7 +213,7 @@ const Boardmodel = (props) => {
           fontSize={0.2}
           color="purple"
           style={{
-            fontFamily: "Georgia, serif"
+            fontFamily: "Georgia, serif",
           }}
         >
           Implicaciones empresas y personas

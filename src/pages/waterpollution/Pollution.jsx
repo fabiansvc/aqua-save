@@ -1,4 +1,3 @@
-import React from "react";
 import "./Pollution.css";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
@@ -11,7 +10,7 @@ const Pollution = () => {
   const navigate = useNavigate();
 
   const handleCLickA = () => {
-    navigate("/Sitemap");
+    navigate("/sitemap");
   };
 
   const handleClickB = () => {

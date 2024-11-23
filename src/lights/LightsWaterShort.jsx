@@ -42,7 +42,7 @@ const LightsWaterShort = () => {
         ref={spotLightRef}
         position={[5, 5, 5]}
         intensity={5}
-        castShadow        
+        castShadow
       />
     </>
   );

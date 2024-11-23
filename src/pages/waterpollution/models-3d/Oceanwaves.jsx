@@ -1,10 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
-import { RigidBody, TrimeshCollider } from "@react-three/rapier";
+import { RigidBody } from "@react-three/rapier";
 
 const Oceanwaves = (props) => {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/models-3d/animated_ocean_scene_tutorial_example_1.glb");
+  const { nodes, materials, animations } = useGLTF(
+    "/models-3d/animated_ocean_scene_tutorial_example_1.glb"
+  );
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {

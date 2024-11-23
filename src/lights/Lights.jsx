@@ -44,8 +44,8 @@ const Lights = () => {
         ref={spotLightRef}
         position={[5, 5, 5]}
         intensity={5}
-        castShadow     
-        color={"red"}   
+        castShadow
+        color={"red"}
       />
     </>
   );

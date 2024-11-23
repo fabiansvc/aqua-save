@@ -6,7 +6,7 @@
   height: 100%;
   text-align: center;
   background-color: #d3edf7;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .welcome-header {
@@ -14,16 +14,14 @@
   font-family: Georgia, serif;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #333
-  
+  color: #333;
 }
 
-.app-logo{
+.app-logo {
   width: 250px;
   margin-bottom: 20px;
 }
 
-.button{
+.button {
   background-color: #8a78cc;
 }
-

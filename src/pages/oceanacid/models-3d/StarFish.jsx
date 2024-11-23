@@ -18,7 +18,12 @@ const StarFish = (props) => {
   }, [actions]);
 
   return (
-    <RigidBody ref={rbStarfishRef}  name="rbStarFish" type="fixed" colliders={false}>
+    <RigidBody
+      ref={rbStarfishRef}
+      name="rbStarFish"
+      type="fixed"
+      colliders={false}
+    >
       <group ref={starfishRef} {...props} dispose={null}>
         <group name="Scene">
           <group
@@ -39,7 +44,6 @@ const StarFish = (props) => {
                     />
                     <skinnedMesh
                       name="Object_8"
-                      
                       geometry={nodes.Object_8.geometry}
                       material={materials.Underside}
                       skeleton={nodes.Object_8.skeleton}
@@ -53,7 +57,7 @@ const StarFish = (props) => {
           </group>
         </group>
       </group>
-      <CuboidCollider args={[1.5,1,1]} position={[1, 1, 9]}/>
+      <CuboidCollider args={[1.5, 1, 1]} position={[1, 1, 9]} />
     </RigidBody>
   );
 };

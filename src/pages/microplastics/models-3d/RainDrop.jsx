@@ -1,31 +1,27 @@
-/*eslint-disable react/no-unknown-property */
-
 import { useGLTF } from "@react-three/drei";
 import useSlider from "../../../stores/use-slider";
 import { dataMicroplastic } from "../../../Locals/dataMicroplastic";
 import { dataRecomendation } from "../../../Locals/dataRecomendation";
 
+const RainDrop = (props) => {
+  const { nodes, materials } = useGLTF("models-3d/microplastic/rain-drop.glb");
 
+  const { setSlider, slider, setData } = useSlider();
 
-const RainDrop = (props) =>{
-    const{nodes,materials} = useGLTF("models-3d/microplastic/rain-drop.glb");
+  const handleText = (data) => {
+    setData(data);
+    setSlider(true);
+    console.log("click", slider);
+  };
 
-    const { setSlider, slider, setData } = useSlider();
-
-    const handleText = (data) => {
-      setData(data);
-      setSlider(true);
-      console.log("click", slider);
-    };
-
-    return(
-        <group {...props} dispose={null}>
+  return (
+    <group {...props} dispose={null}>
       <group name="Scene">
         <mesh
           name="RainDrop1"
           geometry={nodes.high_poly.geometry}
           material={materials.Material_0}
-          scale={0.30}
+          scale={0.3}
           castShadow
           position={[-0.9, 0.24, 0.2]}
           onClick={() => handleText(dataMicroplastic)}
@@ -34,14 +30,14 @@ const RainDrop = (props) =>{
           name="RainDrop2"
           geometry={nodes.high_poly.geometry}
           material={materials.Material_0}
-          scale={0.30}
+          scale={0.3}
           castShadow
           onClick={() => handleText(dataRecomendation)}
-          position={[1, 0.3, 0.2]}>
-        </mesh>            
+          position={[1, 0.3, 0.2]}
+        ></mesh>
       </group>
     </group>
-    );
+  );
 };
 
 export default RainDrop;

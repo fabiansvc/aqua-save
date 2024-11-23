@@ -1,5 +1,5 @@
 .treatment-container {
-  background-image: url('/public/images/waterpollution/background2.jpeg');
+  background-image: url("/public/images/waterpollution/background2.jpeg");
   background-size: cover;
   background-position: center;
   padding: 20px;
@@ -7,7 +7,7 @@
   min-height: 100vh; /* Ocupa toda la altura de la ventana */
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
 }
 
 .treatment-title {
@@ -49,12 +49,12 @@
   background-color: rgba(211, 237, 247, 0.8);
 }
 
-.Scene1treatment{
+.Scene1treatment {
   margin: 50px;
   height: 700px;
   width: 700px;
 }
- .Scene2treatment {
+.Scene2treatment {
   margin: 20px 0;
   height: 600px;
 }
@@ -70,7 +70,7 @@
   font-family: Georgia, serif;
 }
 
-.treatment-title-explanation{
+.treatment-title-explanation {
   font-size: 2rem;
   margin-bottom: 10px;
   color: #8a78cc;
@@ -98,47 +98,47 @@
 /* Botones */
 .buttonBackSite,
 .buttonBackWater {
-    background-color: #8a78cc;
-    border: none;
-    color: #fff;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #8a78cc;
+  border: none;
+  color: #fff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .buttonBackSite:hover,
 .buttonBackWater:hover {
-    background-color: #7264a8; /* Color más oscuro al pasar el mouse */
+  background-color: #7264a8; /* Color más oscuro al pasar el mouse */
 }
 
 /* Contenedor de botones */
 .button-group {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Espaciado entre botones */
-    margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espaciado entre botones */
+  margin: 20px 0;
 }
 
 /* Responsividad */
 @media (max-width: 768px) {
-    .pollution-description,
-    .pollution-introduction {
-        width: 90%; /* Ajusta el ancho en pantallas pequeñas */
-        font-size: 1rem;
-    }
+  .pollution-description,
+  .pollution-introduction {
+    width: 90%; /* Ajusta el ancho en pantallas pequeñas */
+    font-size: 1rem;
+  }
 
-    .buttonBackSite,
-    .buttonBackWater {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
+  .buttonBackSite,
+  .buttonBackWater {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
 
-    .pollution-title {
-        font-size: 2rem; /* Reduce el tamaño del título */
-    }
+  .pollution-title {
+    font-size: 2rem; /* Reduce el tamaño del título */
+  }
 }

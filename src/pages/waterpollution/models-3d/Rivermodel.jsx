@@ -1,11 +1,11 @@
-import React, { useRef, useEffect } from 'react'
-import { useGLTF, useAnimations } from '@react-three/drei'
-import { useThree } from '@react-three/fiber'
+import { useRef, useEffect } from "react";
+import { useGLTF, useAnimations } from "@react-three/drei";
+import { useThree } from "@react-three/fiber";
 
 const Rivermodel = (props) => {
-  const group = useRef()
-  const { nodes, materials, animations } = useGLTF("/models-3d/lake.glb"); 
-  const { actions } = useAnimations(animations, group); 
+  const group = useRef();
+  const { nodes, materials, animations } = useGLTF("/models-3d/lake.glb");
+  const { actions } = useAnimations(animations, group);
 
   const { camera } = useThree();
 
@@ -29,7 +29,6 @@ const Rivermodel = (props) => {
     }
   }, [actions]);
 
-
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
@@ -42,56 +41,56 @@ const Rivermodel = (props) => {
                   castShadow
                   receiveShadow
                   geometry={nodes.Object_4.geometry}
-                  material={materials['Material.001']}
+                  material={materials["Material.001"]}
                 />
                 <mesh
                   name="Object_5"
                   castShadow
                   receiveShadow
                   geometry={nodes.Object_5.geometry}
-                  material={materials['Material.001']}
+                  material={materials["Material.001"]}
                 />
                 <mesh
                   name="Object_6"
                   castShadow
                   receiveShadow
                   geometry={nodes.Object_6.geometry}
-                  material={materials['Material.001']}
+                  material={materials["Material.001"]}
                 />
                 <mesh
                   name="Object_7"
                   castShadow
                   receiveShadow
                   geometry={nodes.Object_7.geometry}
-                  material={materials['Material.001']}
+                  material={materials["Material.001"]}
                 />
                 <mesh
                   name="Object_8"
                   castShadow
                   receiveShadow
                   geometry={nodes.Object_8.geometry}
-                  material={materials['Material.001']}
+                  material={materials["Material.001"]}
                 />
                 <mesh
                   name="Object_9"
                   castShadow
                   receiveShadow
                   geometry={nodes.Object_9.geometry}
-                  material={materials['Material.001']}
+                  material={materials["Material.001"]}
                 />
                 <mesh
                   name="Object_10"
                   castShadow
                   receiveShadow
                   geometry={nodes.Object_10.geometry}
-                  material={materials['Material.001']}
+                  material={materials["Material.001"]}
                 />
                 <mesh
                   name="Object_11"
                   castShadow
                   receiveShadow
                   geometry={nodes.Object_11.geometry}
-                  material={materials['Material.001']}
+                  material={materials["Material.001"]}
                 />
               </group>
               <group name="Water_1_1" position={[0, 0.5, 0]} scale={6.7}>
@@ -117,9 +116,9 @@ const Rivermodel = (props) => {
         </group>
       </group>
     </group>
-  )
-}
+  );
+};
 
-useGLTF.preload("/models-3d/lake.glb"); 
+useGLTF.preload("/models-3d/lake.glb");
 
-export default Rivermodel; 
+export default Rivermodel;

@@ -1,21 +1,18 @@
-import { useGLTF } from "@react-three/drei"
-
+import { useGLTF } from "@react-three/drei";
 
 const TreeWelcome = (props) => {
-     const {nodes, materials}= useGLTF("models-3d/tree.glb");
-        
-  
-     return (
-        <group {...props} dispose={null}>
-          <mesh 
-            receiveShadow
-            geometry={nodes.high_poly.geometry}
-            material={materials.Material_0}    
-            scale={10.000}
-          />
-        </group>
-     )
+  const { nodes, materials } = useGLTF("models-3d/tree.glb");
 
+  return (
+    <group {...props} dispose={null}>
+      <mesh
+        receiveShadow
+        geometry={nodes.high_poly.geometry}
+        material={materials.Material_0}
+        scale={10.0}
+      />
+    </group>
+  );
 };
 
 export default TreeWelcome;

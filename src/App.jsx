@@ -1,9 +1,7 @@
-import Login from './pages/login/Login';
+import Login from "./pages/login/Login";
 
 function App() {
-  return (
-      <Login />
-  );
+  return <Login />;
 }
 
 export default App;

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { useGLTF, useKeyboardControls } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { RigidBody } from "@react-three/rapier";
@@ -38,13 +38,18 @@ const Boatmodel = (props) => {
     }
   });
 
-
-  const handleBoat = useCallback(()=> {
-    BoatRef.current.applyTorqueImpulse({x:0, y:20, z:0}, true);
-  },[]);
+  // const handleBoat = useCallback(() => {
+  //   BoatRef.current.applyTorqueImpulse({ x: 0, y: 20, z: 0 }, true);
+  // }, []);
 
   return (
-    <RigidBody type="dynamic" colliders="trimesh" mass={75} gravityScale={0.05} restitution={1}>
+    <RigidBody
+      type="dynamic"
+      colliders="trimesh"
+      mass={75}
+      gravityScale={0.05}
+      restitution={1}
+    >
       <group
         {...props}
         dispose={null}

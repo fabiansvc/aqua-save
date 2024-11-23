@@ -12,7 +12,6 @@ import Pollution from "../pages/waterpollution/Pollution.jsx";
 import Implication from "../pages/waterpollution/Implication.jsx";
 import Watercare from "../pages/waterpollution/Watercare.jsx";
 import Treatment from "../pages/waterpollution/Treatment.jsx";
-import Gridselection from "../components/Gridselection.jsx";
 
 const Routers = createBrowserRouter([
   {
@@ -32,30 +31,30 @@ const Routers = createBrowserRouter([
     ),
   },
   {
-     path: "/welcome",
-     element: (
-       <ProtectedRouter>
-         <Welcome />
-       </ProtectedRouter>
-     ),
-   },
+    path: "/welcome",
+    element: (
+      <ProtectedRouter>
+        <Welcome />
+      </ProtectedRouter>
+    ),
+  },
   {
-     path: "/sitemap",
-     element: (
-       <ProtectedRouter>
-          <Sitemap />
-       </ProtectedRouter>
-     ),
-   },
+    path: "/sitemap",
+    element: (
+      <ProtectedRouter>
+        <Sitemap />
+      </ProtectedRouter>
+    ),
+  },
   {
-     path: "/oceanacid",
-     element: (
-       <ProtectedRouter>
-         <Oceanacid />
-       </ProtectedRouter>
-     ),
-   },
-   {
+    path: "/oceanacid",
+    element: (
+      <ProtectedRouter>
+        <Oceanacid />
+      </ProtectedRouter>
+    ),
+  },
+  {
     path: "/watershortages",
     element: (
       <ProtectedRouter>
@@ -67,7 +66,7 @@ const Routers = createBrowserRouter([
     path: "/waterpollution",
     element: (
       <ProtectedRouter>
-        <Water/>
+        <Water />
       </ProtectedRouter>
     ),
   },

@@ -1,7 +1,5 @@
-import React from "react";
 import "./Implication.css";
 import { Canvas } from "@react-three/fiber";
-import Coral from "./models-3d/Coral";
 import { OrbitControls } from "@react-three/drei";
 import { useNavigate } from "react-router-dom";
 import Pollutionscene from "./models-3d/Pollutionscene";
@@ -12,7 +10,7 @@ const Implication = () => {
   const navigate = useNavigate();
 
   const handleCLickA = () => {
-    navigate("/Sitemap");
+    navigate("/sitemap");
   };
 
   const handleClickB = () => {
@@ -63,7 +61,7 @@ const Implication = () => {
       <section className="Scene2implication">
         <Canvas>
           <OrbitControls />
-          <Lights/>
+          <Lights />
           <directionalLight position={[5, 5, 5]} />
           <Tapmodel />
         </Canvas>

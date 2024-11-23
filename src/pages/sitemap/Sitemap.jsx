@@ -1,5 +1,4 @@
 import "./Sitemap.css";
-import React from "react";
 import { Link } from "react-router-dom";
 import Gridselection from "../../components/Gridselection";
 import useAuthStore from "../../stores/use-auth-store";
@@ -28,14 +27,19 @@ const Sitemap = () => {
           enlaces a todas las secciones importantes de nuestra aplicación.
         </p>
         <div className="text-summary">
-        <p>
-           Te invitamos a explorar los principales problemas ambientales relacionados con el agua.
-           Hablamos de la contaminación, que afecta la calidad del agua y pone en riesgo tanto los ecosistemas como nuestra salud;
-           la acidificación de los océanos, que desestabiliza la vida marina y amenaza especies clave; 
-           los microplásticos, que son pequeñas partículas que contaminan el agua y afectan a la fauna y a quienes consumen productos del mar; 
-           y la escasez de agua, un problema agravado por el cambio climático y el uso excesivo del agua, dejando a millones sin acceso a este recurso esencial. 
-           Cuidar el agua es fundamental para proteger los ecosistemas, garantizar nuestra salud y preservar la vida en el planeta.
-        </p>
+          <p>
+            Te invitamos a explorar los principales problemas ambientales
+            relacionados con el agua. Hablamos de la contaminación, que afecta
+            la calidad del agua y pone en riesgo tanto los ecosistemas como
+            nuestra salud; la acidificación de los océanos, que desestabiliza la
+            vida marina y amenaza especies clave; los microplásticos, que son
+            pequeñas partículas que contaminan el agua y afectan a la fauna y a
+            quienes consumen productos del mar; y la escasez de agua, un
+            problema agravado por el cambio climático y el uso excesivo del
+            agua, dejando a millones sin acceso a este recurso esencial. Cuidar
+            el agua es fundamental para proteger los ecosistemas, garantizar
+            nuestra salud y preservar la vida en el planeta.
+          </p>
         </div>
 
         <div className="selection-temes">

@@ -8,7 +8,7 @@ const firebaseConfig = {
   projectId: "recycle-121f9",
   storageBucket: "recycle-121f9.appspot.com",
   messagingSenderId: "1073202201049",
-  appId: "1:1073202201049:web:d33dd778a5119fece619c8"
+  appId: "1:1073202201049:web:d33dd778a5119fece619c8",
 };
 
 // Initialize Firebase

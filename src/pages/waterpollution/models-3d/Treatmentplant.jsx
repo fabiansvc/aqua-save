@@ -1,19 +1,17 @@
-
-import React, { useRef, useEffect } from 'react'
-import { useGLTF } from '@react-three/drei'
-import { useThree } from '@react-three/fiber';
+import { useEffect } from "react";
+import { useGLTF } from "@react-three/drei";
+import { useThree } from "@react-three/fiber";
 
 const Treatmentplant = (props) => {
-  const { nodes, materials } = useGLTF("/models-3d/water_treatment_plant.glb"); 
+  const { nodes, materials } = useGLTF("/models-3d/water_treatment_plant.glb");
 
   const { camera } = useThree();
 
   useEffect(() => {
     camera.position.set(0, 20, 15);
     camera.lookAt(0, 0, 0);
-  }, [camera]); 
+  }, [camera]);
 
-  
   return (
     <group {...props} dispose={null}>
       <group position={[3.3, 0.3, -3.8]} rotation={[0, -Math.PI / 2, 0]}>
@@ -237,9 +235,9 @@ const Treatmentplant = (props) => {
         material={materials.Fence}
       />
     </group>
-  )
-}
+  );
+};
 
-useGLTF.preload("/models-3d/water_treatment_plant.glb"); 
+useGLTF.preload("/models-3d/water_treatment_plant.glb");
 
-export default Treatmentplant; 
+export default Treatmentplant;

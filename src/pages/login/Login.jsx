@@ -8,8 +8,6 @@ import { OrbitControls } from "@react-three/drei";
 import Tree from "./models-3d/Tree";
 import Lights from "../../lights/LightsLogin";
 
-
-
 const Login = () => {
   const { user, loginGoogleWithPopUp, logout, observeAuthState, loading } =
     useAuthStore();
@@ -37,7 +35,6 @@ const Login = () => {
     }
   }, [user, navigate]);
 
-
   const handleLogin = useCallback(() => {
     loginGoogleWithPopUp();
   }, [loginGoogleWithPopUp]);
@@ -52,15 +49,14 @@ const Login = () => {
 
   return (
     <div className="container-login">
-       
-       <>
-        <Canvas className="app-logo"shadows camera={{position:[0,1,5]}}>
-          <OrbitControls autoRotate/>
-          <Lights/>
-          <Tree/>
+      <>
+        <Canvas className="app-logo" shadows camera={{ position: [0, 1, 5] }}>
+          <OrbitControls autoRotate />
+          <Lights />
+          <Tree />
         </Canvas>
       </>
-      
+
       {user ? (
         <>
           <button className="button-logout" onClick={handleLogout}>
@@ -68,13 +64,14 @@ const Login = () => {
           </button>
         </>
       ) : (
-        <>     
+        <>
           <h1 className="aqua-text">AQUA SAVE</h1>
           <p className="welcome-text">Bienvenido! Cada Gota Cuenta</p>
-          <button className= "button-login" onClick={handleLogin}>Iniciar sesión</button>
+          <button className="button-login" onClick={handleLogin}>
+            Iniciar sesión
+          </button>
         </>
       )}
-
     </div>
   );
 };

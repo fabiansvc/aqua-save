@@ -1,21 +1,19 @@
 import useSlider from "../../stores/use-slider";
 import "./Slider2.css";
 import Carousel from "react-bootstrap/Carousel";
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from "react-router-dom";
 
 const Card = ({ item }) => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   return (
     <div className="card-slider2">
       <h1 className="title2">{item.title}</h1>
-      <p className="content2">{item.content}
-      </p>
-
+      <p className="content2">{item.content}</p>
 
       <button
         className="redirect-button2"
-        onClick={() => navigate(item.redirectTo)} 
+        onClick={() => navigate(item.redirectTo)}
       >
         Ir a la página
       </button>
@@ -46,7 +44,7 @@ function Slider2() {
           <Carousel fade>
             {data.map((item, index) => (
               <Carousel.Item key={index}>
-                <Card item={item} /> 
+                <Card item={item} />
               </Carousel.Item>
             ))}
           </Carousel>

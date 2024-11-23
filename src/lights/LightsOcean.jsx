@@ -1,30 +1,27 @@
-
 import { useRef } from "react";
-import { Color  } from "three";
+import { Color } from "three";
 
 const LightsOcean = () => {
   const directionalLightRef = useRef();
- 
-  
+
   const pointLightRef = useRef();
 
-
   return (
-     <>
-     <hemisphereLight
+    <>
+      <hemisphereLight
         position={[0, 5, 0]}
         intensity={0}
         skycColor={new Color("blue")}
         groundColor={new Color("white")}
       />
 
-    <pointLight
-       ref={pointLightRef}
-       castShadow
-       color={"white"}
-       position={[1,1,0]}
-       intensity={10}
-     />
+      <pointLight
+        ref={pointLightRef}
+        castShadow
+        color={"white"}
+        position={[1, 1, 0]}
+        intensity={10}
+      />
 
       <ambientLight intensity={1} />
       <directionalLight

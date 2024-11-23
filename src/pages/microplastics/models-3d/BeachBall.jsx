@@ -8,10 +8,9 @@ const BeachBall = (props) => {
   const ballRef = useRef();
   const handleBall = useCallback(() => {
     ballRef.current.addForce({ x: 0, y: 0, z: -0.1 }, true);
-  
   }, []);
 
-  useFrame((state, delta) => {
+  useFrame(() => {
     ballRef.current.setAngvel({ x: 1, y: 2, z: 0 }, true);
   });
 
@@ -22,12 +21,10 @@ const BeachBall = (props) => {
       colliders="ball"
       gravityScale={0.1}
       restitution={1.5}
-
-      onCollisionEnter={(manifold, target, other)=> {
-        console.log('ball collided')
+      onCollisionEnter={() => {
+        console.log("ball collided");
       }}
-      onCollisionExit={()=> console.log('Ball exited')}
-      
+      onCollisionExit={() => console.log("Ball exited")}
     >
       <group {...props} dispose={null}>
         <group name="Scene">
@@ -40,7 +37,6 @@ const BeachBall = (props) => {
             receiveShadow
             position={[0.1, 0.3, 0]}
             onClick={handleBall}
-                       
           />
         </group>
       </group>

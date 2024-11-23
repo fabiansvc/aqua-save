@@ -1,17 +1,17 @@
-import React, { useRef, useEffect } from 'react'
-import { useGLTF, OrbitControls} from '@react-three/drei'
-import { useFrame } from '@react-three/fiber';
-import { useThree } from '@react-three/fiber';
+import { useRef, useEffect } from "react";
+import { useGLTF } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
+import { useThree } from "@react-three/fiber";
 
 const Barrels = (props) => {
-  const barrelRef = useRef(); 
-  const { nodes, materials } = useGLTF("/models-3d/barrels.glb"); 
+  const barrelRef = useRef();
+  const { nodes, materials } = useGLTF("/models-3d/barrels.glb");
 
-  useFrame(()=>{
-    if (barrelRef.current){
-      barrelRef.current.rotation.y +=0.01; 
+  useFrame(() => {
+    if (barrelRef.current) {
+      barrelRef.current.rotation.y += 0.01;
     }
-  }); 
+  });
 
   const { camera } = useThree();
 
@@ -19,7 +19,6 @@ const Barrels = (props) => {
     camera.position.set(1, 1, 20);
     camera.lookAt(1, 1, 1);
   }, [camera]);
-
 
   return (
     <group {...props} dispose={null} ref={barrelRef}>
@@ -61,9 +60,9 @@ const Barrels = (props) => {
         />
       </group>
     </group>
-  )
-}
+  );
+};
 
-useGLTF.preload("/models-3d/barrels.glb"); 
+useGLTF.preload("/models-3d/barrels.glb");
 
-export default Barrels; 
+export default Barrels;

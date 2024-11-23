@@ -7,47 +7,49 @@ import { Canvas } from "@react-three/fiber";
 import TreeWelcome from "./models-3d/TreeWelcome";
 import Lights from "../../lights/LightsLogin";
 
-
-
 const Welcome = () => {
   const { user, logout } = useAuthStore();
-  const navigate  = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleLogout = useCallback(() => {
     logout();
-    navigate("/"); 
-  }, [logout]);
+    navigate("/");
+  }, [logout, navigate]);
 
   const onHandleButtonNext = useCallback(() => {
-    navigate("/Sitemap"); 
+    navigate("/sitemap");
   }, [navigate]);
 
-
-
-  
   if (!user) {
-    navigate("/Welcome")
-    return <p>Por favor, inicie sesión.</p>; 
+    navigate("/welcome");
+    return <p>Por favor, inicie sesión.</p>;
   }
 
   return (
     <div className="welcome-container">
-
       <>
-        <Canvas className="app-logo"shadows camera={{position:[0,1,5]}}>
-          <OrbitControls autoRotate/>
-          <Lights/>
-          <TreeWelcome/>
+        <Canvas className="app-logo" shadows camera={{ position: [0, 1, 5] }}>
+          <OrbitControls autoRotate />
+          <Lights />
+          <TreeWelcome />
         </Canvas>
       </>
 
       <div className="user-info">
-        <img className="user-photo" src={user.photoURL || "/images/default-avatar.png"} alt={user.displayName || "Usuario"}  />
+        <img
+          className="user-photo"
+          src={user.photoURL || "/images/default-avatar.png"}
+          alt={user.displayName || "Usuario"}
+        />
         <h1 className="welcome-header">Bienvenido! {user.displayName}</h1>
       </div>
       <div className="button-container">
-      <button className="button" onClick={onHandleButtonNext}>Siguiente</button>
-      <button className="button" onClick={handleLogout}>Cerrar Sesión</button>
+        <button className="button" onClick={onHandleButtonNext}>
+          Siguiente
+        </button>
+        <button className="button" onClick={handleLogout}>
+          Cerrar Sesión
+        </button>
       </div>
     </div>
   );
