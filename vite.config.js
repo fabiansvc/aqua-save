@@ -9,16 +9,16 @@ export default defineConfig({
   assetsInclude: ['**/*.glb'],
   build: {
     rollupOptions: {
-      // Evita procesar ciertos módulos problemáticos como `three-stdlib`
+      
       external: ['three-stdlib'],
     },
-    chunkSizeWarningLimit: 1000, // Aumenta el límite de tamaño para chunks
+    chunkSizeWarningLimit: 1000, 
   },
   optimizeDeps: {
     esbuildOptions: {
-      // Soluciona problemas de minificación relacionados con `eval`
+    
       logOverride: {
-        'eval': 'silent', // Silencia la advertencia
+        'eval': 'silent', 
       },
     },
   },
