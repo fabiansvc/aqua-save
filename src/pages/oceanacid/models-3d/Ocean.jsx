@@ -18,7 +18,7 @@ const Ocean = (props) => {
               geometry={nodes.Ocean_1.geometry}
               material={materials.SeaBottomMaterial} 
             />
-            <CuboidCollider args={[25,1,20]} position={[0,0,0]} />
+            <CuboidCollider args={[25,1,20]} position={[0,0.5,0]} />
             </RigidBody>
             <RigidBody name="rbBase" ref={rbOceanRef} type="fixed" colliders={false} mass={75} >
             <mesh
